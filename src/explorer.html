@@ -515,13 +515,15 @@ pre.code .b { color: #a678f0; }
 
   function matchesMethod(node) {
     if (state.methodFilter === "ALL") return true;
+    // Docs have no HTTP method, but they are browsable content: never hide them.
+    if (node.type === "doc") return true;
     if (node.type !== "apiDetail") return false;
     return String(node.method || "").toUpperCase() === state.methodFilter;
   }
 
   /* Does this subtree contain anything that passes the current filter? */
   function subtreeVisible(node) {
-    if (node.type === "apiDetail") {
+    if (node.type === "apiDetail" || node.type === "doc") {
       return matchesQuery(node, state.query) && matchesMethod(node);
     }
     if (!node.children || !node.children.length) return false;
@@ -937,6 +939,13 @@ pre.code .b { color: #a678f0; }
     nodes: function () { return els.tree.querySelectorAll(".node").length; },
     visibleApis: function () {
       return els.tree.querySelectorAll(".row:not(.hidden-by-filter)").length;
+    },
+    // Rows actually laid out on screen: excludes filter-hidden AND
+    // collapsed-subtree rows (those stay in the DOM under a display:none parent).
+    rendered: function () {
+      return [].filter.call(els.tree.querySelectorAll(".row"), function (r) {
+        return r.clientHeight > 0;
+      }).length;
     }
   };
 })();
