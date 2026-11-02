@@ -1,0 +1,5048 @@
+{
+ "source": "https://sellfoxapi.apifox.cn/",
+ "projectId": 1827046,
+ "generatedFrom": "apifox docs sidebarTree",
+ "stats": {
+  "apis": 523,
+  "folders": 110,
+  "docs": 14
+ },
+ "tree": [
+  {
+   "name": "开发指南",
+   "type": "apiDetailFolder",
+   "id": 9252898,
+   "children": [
+    {
+     "name": "赛狐开放平台免责声明",
+     "type": "doc",
+     "id": 3471817,
+     "to": "/doc-3471817"
+    },
+    {
+     "name": "申请API权限",
+     "type": "doc",
+     "id": 1748360,
+     "to": "/doc-1748360"
+    },
+    {
+     "name": "获取 Access Token",
+     "type": "doc",
+     "id": 1589130,
+     "to": "/doc-1589130"
+    },
+    {
+     "name": "限流策略说明",
+     "type": "doc",
+     "id": 4717915,
+     "to": "/doc-4717915"
+    },
+    {
+     "name": "生成sign（签名）",
+     "type": "doc",
+     "id": 1749562,
+     "to": "/doc-1749562"
+    },
+    {
+     "name": "公共请求参数",
+     "type": "doc",
+     "id": 1749600,
+     "to": "/doc-1749600"
+    },
+    {
+     "name": "公共报错",
+     "type": "doc",
+     "id": 1759053,
+     "to": "/doc-1759053"
+    },
+    {
+     "name": "创建赛狐报告",
+     "type": "doc",
+     "id": 2982783,
+     "to": "/doc-2982783"
+    },
+    {
+     "name": "更新公告",
+     "type": "doc",
+     "id": 8391559,
+     "to": "/doc-8391559"
+    },
+    {
+     "name": "数据结构",
+     "type": "apiDetailFolder",
+     "id": 10557874,
+     "children": [
+      {
+       "name": "站点MarketplaceId对应关系",
+       "type": "doc",
+       "id": 1759292,
+       "to": "/doc-1759292"
+      },
+      {
+       "name": "FBA货件打印类型",
+       "type": "doc",
+       "id": 1781783,
+       "to": "/doc-1781783"
+      },
+      {
+       "name": "省份 城市 代码关系",
+       "type": "doc",
+       "id": 1786591,
+       "to": "/doc-1786591"
+      },
+      {
+       "name": "查询亚马逊国家和地区列表",
+       "type": "doc",
+       "id": 8796292,
+       "to": "/doc-8796292"
+      },
+      {
+       "name": "产品分析（2.0）指标定义",
+       "type": "doc",
+       "id": 8966970,
+       "to": "/doc-8966970"
+      }
+     ]
+    },
+    {
+     "name": "场景调用指南",
+     "type": "apiDetailFolder",
+     "id": 10405122
+    }
+   ]
+  },
+  {
+   "name": "商品",
+   "type": "apiDetailFolder",
+   "id": 14824242,
+   "children": [
+    {
+     "name": "商品列表",
+     "type": "apiDetailFolder",
+     "id": 10337962,
+     "children": [
+      {
+       "name": "创建SKU",
+       "type": "apiDetail",
+       "id": 51516592,
+       "method": "POST",
+       "path": "/api/commodity/create.json",
+       "to": "/api-51516592"
+      },
+      {
+       "name": "修改SKU",
+       "type": "apiDetail",
+       "id": 51516597,
+       "method": "POST",
+       "path": "/api/commodity/edit.json",
+       "to": "/api-51516597"
+      },
+      {
+       "name": "查询SKU",
+       "type": "apiDetail",
+       "id": 51516600,
+       "method": "POST",
+       "path": "/api/commodity/pageList.json",
+       "to": "/api-51516600"
+      },
+      {
+       "name": "创建SPU",
+       "type": "apiDetail",
+       "id": 51516599,
+       "method": "POST",
+       "path": "/api/commodity/insertMultiattributeCommodityV2.json",
+       "to": "/api-51516599"
+      },
+      {
+       "name": "修改SPU",
+       "type": "apiDetail",
+       "id": 51516601,
+       "method": "POST",
+       "path": "/api/commodity/updateMultiattributeCommodityV2.json",
+       "to": "/api-51516601"
+      },
+      {
+       "name": "查询SPU",
+       "type": "apiDetail",
+       "id": 51516598,
+       "method": "POST",
+       "path": "/api/commodity/getCommoditySpuList.json",
+       "to": "/api-51516598"
+      },
+      {
+       "name": "获取商品属性列表",
+       "type": "apiDetail",
+       "id": 52898925,
+       "method": "POST",
+       "path": "/api/commodityAttribute/initAttribute.json",
+       "to": "/api-52898925"
+      },
+      {
+       "name": "查看商品详情",
+       "type": "apiDetail",
+       "id": 112191241,
+       "method": "POST",
+       "path": "/api/commodity/getCommodityDetail.json",
+       "to": "/api-112191241"
+      },
+      {
+       "name": "查看商品详情V2",
+       "type": "apiDetail",
+       "id": 352500605,
+       "method": "POST",
+       "path": "/api/commodity/v2/getCommodityDetail.json",
+       "to": "/api-352500605"
+      },
+      {
+       "name": "查询品牌",
+       "type": "apiDetail",
+       "id": 363817141,
+       "method": "POST",
+       "path": "/api/commodity/listBrands.json",
+       "to": "/api-363817141"
+      },
+      {
+       "name": "创建/修改品牌",
+       "type": "apiDetail",
+       "id": 523642163,
+       "method": "POST",
+       "path": "/api/commodity/saveBrand.json",
+       "to": "/api-523642163"
+      },
+      {
+       "name": "创建/修改商品属性",
+       "type": "apiDetail",
+       "id": 526953141,
+       "method": "POST",
+       "path": "/api/commodityAttribute/createOrUpdateCommodityAttribute.json",
+       "to": "/api-526953141"
+      },
+      {
+       "name": "创建/修改SKU",
+       "type": "apiDetail",
+       "id": 529050611,
+       "method": "POST",
+       "path": "/api/commodity/saveOrUpdate.json",
+       "to": "/api-529050611"
+      }
+     ]
+    },
+    {
+     "name": "商品分类",
+     "type": "apiDetailFolder",
+     "id": 77321917,
+     "children": [
+      {
+       "name": "新增商品分类",
+       "type": "apiDetail",
+       "id": 131281549,
+       "method": "POST",
+       "path": "/api/category/addCategory.json",
+       "to": "/api-131281549"
+      },
+      {
+       "name": "查询商品分类",
+       "type": "apiDetail",
+       "id": 51516593,
+       "method": "POST",
+       "path": "/api/category/getList.json",
+       "to": "/api-51516593"
+      },
+      {
+       "name": "修改商品分类",
+       "type": "apiDetail",
+       "id": 51516596,
+       "method": "POST",
+       "path": "/api/category/updateCategory.json",
+       "to": "/api-51516596"
+      },
+      {
+       "name": "删除商品分类",
+       "type": "apiDetail",
+       "id": 51516595,
+       "method": "POST",
+       "path": "/api/category/batchDelete.json",
+       "to": "/api-51516595"
+      }
+     ]
+    },
+    {
+     "name": "辅料管理",
+     "type": "apiDetailFolder",
+     "id": 14817970,
+     "children": [
+      {
+       "name": "查询辅料",
+       "type": "apiDetail",
+       "id": 74245902,
+       "method": "POST",
+       "path": "/api/commodity/aux/pageList.json",
+       "to": "/api-74245902"
+      }
+     ]
+    },
+    {
+     "name": "质检模板",
+     "type": "apiDetailFolder",
+     "id": 72409278,
+     "children": [
+      {
+       "name": "质检模板列表",
+       "type": "apiDetail",
+       "id": 383488079,
+       "method": "POST",
+       "path": "/api/inspectionTemplate/list.json",
+       "to": "/api-383488079"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "销售",
+   "type": "apiDetailFolder",
+   "id": 10337967,
+   "children": [
+    {
+     "name": "在线产品",
+     "type": "apiDetailFolder",
+     "id": 77322801,
+     "children": [
+      {
+       "name": "获取在线产品信息",
+       "type": "apiDetail",
+       "id": 51516624,
+       "method": "POST",
+       "path": "/api/order/api/product/pageList.json",
+       "to": "/api-51516624"
+      },
+      {
+       "name": "获取在线产品信息V2",
+       "type": "apiDetail",
+       "id": 420168353,
+       "method": "POST",
+       "path": "/api/order/api/product/v2/pageList.json",
+       "to": "/api-420168353"
+      },
+      {
+       "name": "在线产品修改业务员",
+       "type": "apiDetail",
+       "id": 165322872,
+       "method": "POST",
+       "path": "/api/order/product/updateDevId.json",
+       "to": "/api-165322872"
+      },
+      {
+       "name": "查询Listing操作日志列表",
+       "type": "apiDetail",
+       "id": 431277213,
+       "method": "POST",
+       "path": "/api/order/api/product/getProductChangeRecordList.json",
+       "to": "/api-431277213"
+      }
+     ]
+    },
+    {
+     "name": "退货报告",
+     "type": "apiDetailFolder",
+     "id": 77322819,
+     "children": [
+      {
+       "name": "FBA退货报告查询",
+       "type": "apiDetail",
+       "id": 116412069,
+       "method": "POST",
+       "path": "/api/order/api/report/fbaReturn/pageList.json",
+       "to": "/api-116412069"
+      },
+      {
+       "name": "FBM退货报告查询",
+       "type": "apiDetail",
+       "id": 116412070,
+       "method": "POST",
+       "path": "/api/order/api/report/fbm/return/order/pageList.json",
+       "to": "/api-116412070"
+      }
+     ]
+    },
+    {
+     "name": "在线产品配对",
+     "type": "apiDetailFolder",
+     "id": 77323121,
+     "children": [
+      {
+       "name": "在线产品按ASIN匹配商品",
+       "type": "apiDetail",
+       "id": 119077677,
+       "method": "POST",
+       "path": "/api/order/api/product/matchByAsin.json",
+       "to": "/api-119077677"
+      },
+      {
+       "name": "在线产品按MSKU匹配商品",
+       "type": "apiDetail",
+       "id": 119077678,
+       "method": "POST",
+       "path": "/api/order/api/product/matchByMsku.json",
+       "to": "/api-119077678"
+      }
+     ]
+    },
+    {
+     "name": "透明计划管理",
+     "type": "apiDetailFolder",
+     "id": 96112884,
+     "children": [
+      {
+       "name": "透明计划产品列表",
+       "type": "apiDetail",
+       "id": 516636183,
+       "method": "POST",
+       "path": "/api/transparency/product/list.json",
+       "to": "/api-516636183"
+      },
+      {
+       "name": "透明计划code列表",
+       "type": "apiDetail",
+       "id": 516636184,
+       "method": "POST",
+       "path": "/api/transparency/code/list.json",
+       "to": "/api-516636184"
+      },
+      {
+       "name": "透明计划申请t-code",
+       "type": "apiDetail",
+       "id": 528263295,
+       "method": "POST",
+       "path": "/api/transparency/product/applyCode.json",
+       "to": "/api-528263295"
+      }
+     ]
+    },
+    {
+     "name": "促销管理",
+     "type": "apiDetailFolder",
+     "id": 98638704,
+     "children": [
+      {
+       "name": "查询促销活动列表-优惠券",
+       "type": "apiDetail",
+       "id": 530755419,
+       "method": "POST",
+       "path": "/api/promotionActivity/coupon/pageList.json",
+       "to": "/api-530755419"
+      },
+      {
+       "name": "查询促销活动列表-折扣(会员折扣)",
+       "type": "apiDetail",
+       "id": 530755420,
+       "method": "POST",
+       "path": "/api/promotionActivity/vipDiscount/pageList.json",
+       "to": "/api-530755420"
+      },
+      {
+       "name": "查询促销活动列表-秒杀",
+       "type": "apiDetail",
+       "id": 530755421,
+       "method": "POST",
+       "path": "/api/promotionActivity/seckill/pageList.json",
+       "to": "/api-530755421"
+      },
+      {
+       "name": "查询促销活动列表-管理促销",
+       "type": "apiDetail",
+       "id": 530755422,
+       "method": "POST",
+       "path": "/api/promotionActivity/managePromo/pageList.json",
+       "to": "/api-530755422"
+      },
+      {
+       "name": "查询促销活动详情-优惠券",
+       "type": "apiDetail",
+       "id": 530755423,
+       "method": "POST",
+       "path": "/api/promotionActivity/coupon/detail.json",
+       "to": "/api-530755423"
+      },
+      {
+       "name": "查询促销活动详情-折扣(会员折扣)",
+       "type": "apiDetail",
+       "id": 530755424,
+       "method": "POST",
+       "path": "/api/promotionActivity/vipDiscount/detail.json",
+       "to": "/api-530755424"
+      },
+      {
+       "name": "查询促销活动详情-秒杀",
+       "type": "apiDetail",
+       "id": 530755425,
+       "method": "POST",
+       "path": "/api/promotionActivity/seckill/detail.json",
+       "to": "/api-530755425"
+      },
+      {
+       "name": "查询促销活动详情-管理促销",
+       "type": "apiDetail",
+       "id": 530755426,
+       "method": "POST",
+       "path": "/api/promotionActivity/managePromo/detail.json",
+       "to": "/api-530755426"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "订单",
+   "type": "apiDetailFolder",
+   "id": 77368706,
+   "children": [
+    {
+     "name": "全部订单",
+     "type": "apiDetailFolder",
+     "id": 77323667,
+     "children": [
+      {
+       "name": "订单详情",
+       "type": "apiDetail",
+       "id": 51516626,
+       "method": "POST",
+       "path": "/api/order/detailByOrderId.json",
+       "to": "/api-51516626"
+      },
+      {
+       "name": "订单详情 批量接口",
+       "type": "apiDetail",
+       "id": 476895394,
+       "method": "POST",
+       "path": "/api/order/detailByOrderIds.json",
+       "to": "/api-476895394"
+      },
+      {
+       "name": "订单列表",
+       "type": "apiDetail",
+       "id": 51516627,
+       "method": "POST",
+       "path": "/api/order/pageList.json",
+       "to": "/api-51516627"
+      }
+     ]
+    },
+    {
+     "name": "订单处理",
+     "type": "apiDetailFolder",
+     "id": 77323486,
+     "children": [
+      {
+       "name": "FBM订单列表",
+       "type": "apiDetail",
+       "id": 196574169,
+       "method": "POST",
+       "path": "/api/packageShip/getPackagePage.json",
+       "to": "/api-196574169"
+      },
+      {
+       "name": "FBM订单详情",
+       "type": "apiDetail",
+       "id": 196574170,
+       "method": "POST",
+       "path": "/api/packageShip/packageDetail.json",
+       "to": "/api-196574170"
+      },
+      {
+       "name": "提交平台",
+       "type": "apiDetail",
+       "id": 227637649,
+       "method": "POST",
+       "path": "/api/packageShip/submitToPlatform.json",
+       "to": "/api-227637649"
+      },
+      {
+       "name": "更换配对",
+       "type": "apiDetail",
+       "id": 302751092,
+       "method": "POST",
+       "path": "/api/packageShip/updateMatch.json",
+       "to": "/api-302751092"
+      },
+      {
+       "name": "查询订单处理列表",
+       "type": "apiDetail",
+       "id": 395863444,
+       "method": "POST",
+       "path": "/api/packageShip/v1/getPackagePage.json",
+       "to": "/api-395863444"
+      },
+      {
+       "name": "查询订单处理详情",
+       "type": "apiDetail",
+       "id": 395863445,
+       "method": "POST",
+       "path": "/api/packageShip/v1/packageDetail.json",
+       "to": "/api-395863445"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "VC",
+   "type": "apiDetailFolder",
+   "id": 98652536,
+   "children": [
+    {
+     "name": "VC销量统计",
+     "type": "apiDetailFolder",
+     "id": 98652594,
+     "children": [
+      {
+       "name": "VC销量统计-分页列表",
+       "type": "apiDetail",
+       "id": 530832965,
+       "method": "POST",
+       "path": "/api/vc/sale/stat/pageList.json",
+       "to": "/api-530832965"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "客服",
+   "type": "apiDetailFolder",
+   "id": 23513950,
+   "children": [
+    {
+     "name": "评价管理",
+     "type": "apiDetailFolder",
+     "id": 77324693,
+     "children": [
+      {
+       "name": "获取评价明细列表",
+       "type": "apiDetail",
+       "id": 119107035,
+       "method": "POST",
+       "path": "/api/review/pageDetailList.json",
+       "to": "/api-119107035"
+      }
+     ]
+    },
+    {
+     "name": "绩效管理",
+     "type": "apiDetailFolder",
+     "id": 98622589,
+     "children": [
+      {
+       "name": "查询店铺绩效列表",
+       "type": "apiDetail",
+       "id": 530757841,
+       "method": "POST",
+       "path": "/api/shop/performance/pageList.json",
+       "to": "/api-530757841"
+      },
+      {
+       "name": "查询店铺绩效详情",
+       "type": "apiDetail",
+       "id": 530757842,
+       "method": "POST",
+       "path": "/api/shop/performance/detail.json",
+       "to": "/api-530757842"
+      }
+     ]
+    },
+    {
+     "name": "售后管理",
+     "type": "apiDetailFolder",
+     "id": 98639731,
+     "children": [
+      {
+       "name": "查询售后工单列表",
+       "type": "apiDetail",
+       "id": 530759371,
+       "method": "POST",
+       "path": "/api/followUp/pageList.json",
+       "to": "/api-530759371"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "广告",
+   "type": "apiDetailFolder",
+   "id": 10506239,
+   "children": [
+    {
+     "name": "天维度报告",
+     "type": "apiDetailFolder",
+     "id": 66999501,
+     "children": [
+      {
+       "name": "创建广告下载任务",
+       "type": "apiDetail",
+       "id": 52365899,
+       "method": "POST",
+       "path": "/api/cpc/download/createTask.json",
+       "to": "/api-52365899"
+      },
+      {
+       "name": "查询广告报告进度",
+       "type": "apiDetail",
+       "id": 52365898,
+       "method": "POST",
+       "path": "/api/cpc/download/pageList.json",
+       "to": "/api-52365898"
+      }
+     ]
+    },
+    {
+     "name": "小时维度报告",
+     "type": "apiDetailFolder",
+     "id": 67066687,
+     "children": [
+      {
+       "name": "小时报告-SP广告活动报告",
+       "type": "apiDetail",
+       "id": 352957023,
+       "method": "POST",
+       "path": "/api/cpc/hourData/spCampaign.json",
+       "to": "/api-352957023"
+      },
+      {
+       "name": "小时报告-SP广告组报告",
+       "type": "apiDetail",
+       "id": 352957028,
+       "method": "POST",
+       "path": "/api/cpc/hourData/spGroup.json",
+       "to": "/api-352957028"
+      },
+      {
+       "name": "小时报告-SP广告产品报告",
+       "type": "apiDetail",
+       "id": 352957030,
+       "method": "POST",
+       "path": "/api/cpc/hourData/spAdProduct.json",
+       "to": "/api-352957030"
+      },
+      {
+       "name": "小时报告-SP投放报告",
+       "type": "apiDetail",
+       "id": 352957031,
+       "method": "POST",
+       "path": "/api/cpc/hourData/spTarget.json",
+       "to": "/api-352957031"
+      },
+      {
+       "name": "小时报告-SP广告位报告",
+       "type": "apiDetail",
+       "id": 352957029,
+       "method": "POST",
+       "path": "/api/cpc/hourData/spPlacement.json",
+       "to": "/api-352957029"
+      },
+      {
+       "name": "小时报告-SB广告活动报告",
+       "type": "apiDetail",
+       "id": 352957032,
+       "method": "POST",
+       "path": "/api/cpc/hourData/sbCampaign.json",
+       "to": "/api-352957032"
+      },
+      {
+       "name": "小时报告-SB广告组报告",
+       "type": "apiDetail",
+       "id": 352957033,
+       "method": "POST",
+       "path": "/api/cpc/hourData/sbGroup.json",
+       "to": "/api-352957033"
+      },
+      {
+       "name": "小时报告-SB投放报告",
+       "type": "apiDetail",
+       "id": 352957035,
+       "method": "POST",
+       "path": "/api/cpc/hourData/sbTarget.json",
+       "to": "/api-352957035"
+      },
+      {
+       "name": "小时报告-SB广告位报告",
+       "type": "apiDetail",
+       "id": 352957034,
+       "method": "POST",
+       "path": "/api/cpc/hourData/sbPlacement.json",
+       "to": "/api-352957034"
+      },
+      {
+       "name": "小时报告-SD广告活动报告",
+       "type": "apiDetail",
+       "id": 352957024,
+       "method": "POST",
+       "path": "/api/cpc/hourData/sdCampaign.json",
+       "to": "/api-352957024"
+      },
+      {
+       "name": "小时报告-SD广告组报告",
+       "type": "apiDetail",
+       "id": 352957025,
+       "method": "POST",
+       "path": "/api/cpc/hourData/sdGroup.json",
+       "to": "/api-352957025"
+      },
+      {
+       "name": "小时报告-SD广告产品报告",
+       "type": "apiDetail",
+       "id": 352957026,
+       "method": "POST",
+       "path": "/api/cpc/hourData/sdAdProduct.json",
+       "to": "/api-352957026"
+      },
+      {
+       "name": "小时报告-SD投放报告",
+       "type": "apiDetail",
+       "id": 352957027,
+       "method": "POST",
+       "path": "/api/cpc/hourData/sdTarget.json",
+       "to": "/api-352957027"
+      }
+     ]
+    },
+    {
+     "name": "基础数据",
+     "type": "apiDetailFolder",
+     "id": 69582849,
+     "children": [
+      {
+       "name": "广告组合",
+       "type": "apiDetail",
+       "id": 367482262,
+       "method": "POST",
+       "path": "/api/cpc/manageData/portfolio.json",
+       "to": "/api-367482262"
+      },
+      {
+       "name": "SP广告活动",
+       "type": "apiDetail",
+       "id": 367482273,
+       "method": "POST",
+       "path": "/api/cpc/manageData/spCampaign.json",
+       "to": "/api-367482273"
+      },
+      {
+       "name": "SP广告组",
+       "type": "apiDetail",
+       "id": 367482276,
+       "method": "POST",
+       "path": "/api/cpc/manageData/spGroup.json",
+       "to": "/api-367482276"
+      },
+      {
+       "name": "SP广告产品",
+       "type": "apiDetail",
+       "id": 367482277,
+       "method": "POST",
+       "path": "/api/cpc/manageData/spAdProduct.json",
+       "to": "/api-367482277"
+      },
+      {
+       "name": "SP商品投放",
+       "type": "apiDetail",
+       "id": 367482279,
+       "method": "POST",
+       "path": "/api/cpc/manageData/spTarget.json",
+       "to": "/api-367482279"
+      },
+      {
+       "name": "SP关键词投放",
+       "type": "apiDetail",
+       "id": 367482278,
+       "method": "POST",
+       "path": "/api/cpc/manageData/spKeyword.json",
+       "to": "/api-367482278"
+      },
+      {
+       "name": "SP否定商品",
+       "type": "apiDetail",
+       "id": 367482281,
+       "method": "POST",
+       "path": "/api/cpc/manageData/spNeTarget.json",
+       "to": "/api-367482281"
+      },
+      {
+       "name": "SP否定关键词",
+       "type": "apiDetail",
+       "id": 367482280,
+       "method": "POST",
+       "path": "/api/cpc/manageData/spNeKeyword.json",
+       "to": "/api-367482280"
+      },
+      {
+       "name": "SB广告活动",
+       "type": "apiDetail",
+       "id": 367482282,
+       "method": "POST",
+       "path": "/api/cpc/manageData/sbCampaign.json",
+       "to": "/api-367482282"
+      },
+      {
+       "name": "SB广告组",
+       "type": "apiDetail",
+       "id": 367482263,
+       "method": "POST",
+       "path": "/api/cpc/manageData/sbGroup.json",
+       "to": "/api-367482263"
+      },
+      {
+       "name": "SB广告产品(创意)",
+       "type": "apiDetail",
+       "id": 367482264,
+       "method": "POST",
+       "path": "/api/cpc/manageData/sbAdProduct.json",
+       "to": "/api-367482264"
+      },
+      {
+       "name": "SB商品投放",
+       "type": "apiDetail",
+       "id": 367482266,
+       "method": "POST",
+       "path": "/api/cpc/manageData/sbTarget.json",
+       "to": "/api-367482266"
+      },
+      {
+       "name": "SB关键词投放",
+       "type": "apiDetail",
+       "id": 367482265,
+       "method": "POST",
+       "path": "/api/cpc/manageData/sbKeyword.json",
+       "to": "/api-367482265"
+      },
+      {
+       "name": "SB否定商品",
+       "type": "apiDetail",
+       "id": 367482268,
+       "method": "POST",
+       "path": "/api/cpc/manageData/sbNeTarget.json",
+       "to": "/api-367482268"
+      },
+      {
+       "name": "SB否定关键词",
+       "type": "apiDetail",
+       "id": 367482267,
+       "method": "POST",
+       "path": "/api/cpc/manageData/sbNeKeyword.json",
+       "to": "/api-367482267"
+      },
+      {
+       "name": "SD广告活动",
+       "type": "apiDetail",
+       "id": 367482269,
+       "method": "POST",
+       "path": "/api/cpc/manageData/sdCampaign.json",
+       "to": "/api-367482269"
+      },
+      {
+       "name": "SD广告组",
+       "type": "apiDetail",
+       "id": 367482270,
+       "method": "POST",
+       "path": "/api/cpc/manageData/sdGroup.json",
+       "to": "/api-367482270"
+      },
+      {
+       "name": "SD广告产品",
+       "type": "apiDetail",
+       "id": 367482271,
+       "method": "POST",
+       "path": "/api/cpc/manageData/sdAdProduct.json",
+       "to": "/api-367482271"
+      },
+      {
+       "name": "SD广告创意",
+       "type": "apiDetail",
+       "id": 367482272,
+       "method": "POST",
+       "path": "/api/cpc/manageData/sdCreative.json",
+       "to": "/api-367482272"
+      },
+      {
+       "name": "SD商品投放",
+       "type": "apiDetail",
+       "id": 367482274,
+       "method": "POST",
+       "path": "/api/cpc/manageData/sdTarget.json",
+       "to": "/api-367482274"
+      },
+      {
+       "name": "SD否定商品",
+       "type": "apiDetail",
+       "id": 367482275,
+       "method": "POST",
+       "path": "/api/cpc/manageData/sdNeTarget.json",
+       "to": "/api-367482275"
+      }
+     ]
+    },
+    {
+     "name": "其他报告",
+     "type": "apiDetailFolder",
+     "id": 80024498,
+     "children": [
+      {
+       "name": "ABA搜索词",
+       "type": "apiDetail",
+       "id": 426587990,
+       "method": "POST",
+       "path": "/api/cpc/searchTerms/pageList.json",
+       "to": "/api-426587990"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "FBA",
+   "type": "apiDetailFolder",
+   "id": 10337964,
+   "children": [
+    {
+     "name": "发货计划",
+     "type": "apiDetailFolder",
+     "id": 15659774,
+     "children": [
+      {
+       "name": "创建发货计划",
+       "type": "apiDetail",
+       "id": 78670102,
+       "method": "POST",
+       "path": "/api/fba/deliveryPlan/create.json",
+       "to": "/api-78670102"
+      },
+      {
+       "name": "获取发货批次列表",
+       "type": "apiDetail",
+       "id": 248109094,
+       "method": "POST",
+       "path": "/api/fba/deliveryPlan/pageList.json",
+       "to": "/api-248109094"
+      },
+      {
+       "name": "获取发货批次详情",
+       "type": "apiDetail",
+       "id": 248109093,
+       "method": "POST",
+       "path": "/api/fba/deliveryPlan/detail.json",
+       "to": "/api-248109093"
+      }
+     ]
+    },
+    {
+     "name": "FBA货件（STA）",
+     "type": "apiDetailFolder",
+     "id": 48229591,
+     "children": [
+      {
+       "name": "获取FBA货件列表",
+       "type": "apiDetail",
+       "id": 484698677,
+       "method": "POST",
+       "path": "/api/inbound/shipment/page.json",
+       "to": "/api-484698677"
+      },
+      {
+       "name": "入库计划详情",
+       "type": "apiDetail",
+       "id": 250107681,
+       "method": "POST",
+       "path": "/api/inbound/getInboundPlan.json",
+       "to": "/api-250107681"
+      },
+      {
+       "name": "获取入库计划列表",
+       "type": "apiDetail",
+       "id": 250107682,
+       "method": "POST",
+       "path": "/api/inbound/plan/page.json",
+       "to": "/api-250107682"
+      },
+      {
+       "name": "货件详情",
+       "type": "apiDetail",
+       "id": 250107683,
+       "method": "POST",
+       "path": "/api/inbound/shipment/detail.json",
+       "to": "/api-250107683"
+      },
+      {
+       "name": "分页查询货件详情",
+       "type": "apiDetail",
+       "id": 489987250,
+       "method": "POST",
+       "path": "/api/inbound/shipment/detailsPage.json",
+       "to": "/api-489987250"
+      },
+      {
+       "name": "更新追踪编码",
+       "type": "apiDetail",
+       "id": 261465769,
+       "method": "POST",
+       "path": "/api/inbound/putTrackingDetails.json",
+       "to": "/api-261465769"
+      },
+      {
+       "name": "确认预计送达时间窗口",
+       "type": "apiDetail",
+       "id": 309716626,
+       "method": "POST",
+       "path": "/api/inbound/confirmDeliveryWindowOption.json",
+       "to": "/api-309716626"
+      },
+      {
+       "name": "确认装箱选项",
+       "type": "apiDetail",
+       "id": 309716627,
+       "method": "POST",
+       "path": "/api/inbound/confirmPackingOption.json",
+       "to": "/api-309716627"
+      },
+      {
+       "name": "确认入库配置选项",
+       "type": "apiDetail",
+       "id": 309716628,
+       "method": "POST",
+       "path": "/api/inbound/confirmPlacementOption.json",
+       "to": "/api-309716628"
+      },
+      {
+       "name": "确认运输承运人选项",
+       "type": "apiDetail",
+       "id": 309716629,
+       "method": "POST",
+       "path": "/api/inbound/confirmTransportOption.json",
+       "to": "/api-309716629"
+      },
+      {
+       "name": "创建入库计划",
+       "type": "apiDetail",
+       "id": 309716630,
+       "method": "POST",
+       "path": "/api/inbound/createInboundPlan.json",
+       "to": "/api-309716630"
+      },
+      {
+       "name": "生成预计送达时间窗口",
+       "type": "apiDetail",
+       "id": 309716631,
+       "method": "POST",
+       "path": "/api/inbound/generateDeliveryWindowOptions.json",
+       "to": "/api-309716631"
+      },
+      {
+       "name": "生成装箱组选项",
+       "type": "apiDetail",
+       "id": 309716632,
+       "method": "POST",
+       "path": "/api/inbound/generatePackingOptions.json",
+       "to": "/api-309716632"
+      },
+      {
+       "name": "生成入库配置项",
+       "type": "apiDetail",
+       "id": 309716633,
+       "method": "POST",
+       "path": "/api/inbound/generatePlacementOptions.json",
+       "to": "/api-309716633"
+      },
+      {
+       "name": "生成运输承运人选项",
+       "type": "apiDetail",
+       "id": 309716634,
+       "method": "POST",
+       "path": "/api/inbound/generateTransportationOptions.json",
+       "to": "/api-309716634"
+      },
+      {
+       "name": "打印BOL文件",
+       "type": "apiDetail",
+       "id": 309716635,
+       "method": "POST",
+       "path": "/api/inbound/getBillOfLading.json",
+       "to": "/api-309716635"
+      },
+      {
+       "name": "打印外箱标签",
+       "type": "apiDetail",
+       "id": 309716636,
+       "method": "POST",
+       "path": "/api/inbound/getLabels.json",
+       "to": "/api-309716636"
+      },
+      {
+       "name": "查询预计送达时间窗口",
+       "type": "apiDetail",
+       "id": 309716637,
+       "method": "POST",
+       "path": "/api/inbound/listDeliveryWindowOptions.json",
+       "to": "/api-309716637"
+      },
+      {
+       "name": "查询装箱组商品",
+       "type": "apiDetail",
+       "id": 309716638,
+       "method": "POST",
+       "path": "/api/inbound/listPackingGroupItems.json",
+       "to": "/api-309716638"
+      },
+      {
+       "name": "查询装箱组选项",
+       "type": "apiDetail",
+       "id": 309716639,
+       "method": "POST",
+       "path": "/api/inbound/listPackingOptions.json",
+       "to": "/api-309716639"
+      },
+      {
+       "name": "取消入库计划",
+       "type": "apiDetail",
+       "id": 309716625,
+       "method": "POST",
+       "path": "/api/inbound/cancelInboundPlan.json",
+       "to": "/api-309716625"
+      },
+      {
+       "name": "查询入库配置项",
+       "type": "apiDetail",
+       "id": 309716640,
+       "method": "POST",
+       "path": "/api/inbound/listPlacementOptions.json",
+       "to": "/api-309716640"
+      },
+      {
+       "name": "查询运输承运人选项",
+       "type": "apiDetail",
+       "id": 309716641,
+       "method": "POST",
+       "path": "/api/inbound/listTransportationOptions.json",
+       "to": "/api-309716641"
+      },
+      {
+       "name": "提交装箱信息",
+       "type": "apiDetail",
+       "id": 309716642,
+       "method": "POST",
+       "path": "/api/inbound/setPackingInformation.json",
+       "to": "/api-309716642"
+      },
+      {
+       "name": "查询异步任务状态",
+       "type": "apiDetail",
+       "id": 309716643,
+       "method": "POST",
+       "path": "/api/inbound/taskProcess.json",
+       "to": "/api-309716643"
+      },
+      {
+       "name": "批量查询货件详情",
+       "type": "apiDetail",
+       "id": 328122511,
+       "method": "POST",
+       "path": "/api/inbound/shipment/details.json",
+       "to": "/api-328122511"
+      },
+      {
+       "name": "同步工作流",
+       "type": "apiDetail",
+       "id": 462028305,
+       "method": "POST",
+       "path": "/api/inbound/sync.json",
+       "to": "/api-462028305"
+      },
+      {
+       "name": "按货件编号查询收货地址",
+       "type": "apiDetail",
+       "id": 516638753,
+       "method": "POST",
+       "path": "/api/inbound/shipment/destination.json",
+       "to": "/api-516638753"
+      }
+     ]
+    },
+    {
+     "name": "发货单",
+     "type": "apiDetailFolder",
+     "id": 14824338,
+     "children": [
+      {
+       "name": "获取FBA发货单列表（2.0）",
+       "type": "apiDetail",
+       "id": 484693170,
+       "method": "POST",
+       "path": "/api/fba/shippingOrder/pageList/v2.json",
+       "to": "/api-484693170"
+      },
+      {
+       "name": "获取FBA发货单列表（即将下线）",
+       "type": "apiDetail",
+       "id": 51516614,
+       "method": "POST",
+       "path": "/api/fba/shippingOrder/pageList.json",
+       "to": "/api-51516614"
+      },
+      {
+       "name": "FBA发货单详情（2.0）",
+       "type": "apiDetail",
+       "id": 484693169,
+       "method": "POST",
+       "path": "/api/fba/shippingOrder/detailByShipSn/v2.json",
+       "to": "/api-484693169"
+      },
+      {
+       "name": "FBA发货单详情（即将下线）",
+       "type": "apiDetail",
+       "id": 188252058,
+       "method": "POST",
+       "path": "/api/fba/shippingOrder/detailByShipSn.json",
+       "to": "/api-188252058"
+      },
+      {
+       "name": "FBA发货单产品查询",
+       "type": "apiDetail",
+       "id": 51516613,
+       "method": "POST",
+       "path": "/api/fba/shippingOrder/items.json",
+       "to": "/api-51516613"
+      },
+      {
+       "name": "FBA发货单批量产品查询",
+       "type": "apiDetail",
+       "id": 195576737,
+       "method": "POST",
+       "path": "/api/fba/shippingOrder/itemsBatch.json",
+       "to": "/api-195576737"
+      },
+      {
+       "name": "FBA发货单配货",
+       "type": "apiDetail",
+       "id": 51516610,
+       "method": "POST",
+       "path": "/api/fba/shippingOrder/allotStock.json",
+       "to": "/api-51516610"
+      },
+      {
+       "name": "FBA发货单发货",
+       "type": "apiDetail",
+       "id": 51516611,
+       "method": "POST",
+       "path": "/api/fba/shippingOrder/confirmShip.json",
+       "to": "/api-51516611"
+      },
+      {
+       "name": "FBA发货单创建",
+       "type": "apiDetail",
+       "id": 51516612,
+       "method": "POST",
+       "path": "/api/fba/shippingOrder/create.json",
+       "to": "/api-51516612"
+      },
+      {
+       "name": "FBA发货单编辑物流费用",
+       "type": "apiDetail",
+       "id": 188252059,
+       "method": "POST",
+       "path": "/api/fba/shippingOrder/editLogisticsFee.json",
+       "to": "/api-188252059"
+      }
+     ]
+    },
+    {
+     "name": "FBA货件（旧版）",
+     "type": "apiDetailFolder",
+     "id": 14824315,
+     "children": [
+      {
+       "name": "获取FBA货件列表",
+       "type": "apiDetail",
+       "id": 51516609,
+       "method": "POST",
+       "path": "/api/fba/shipmentPageList.json",
+       "to": "/api-51516609"
+      },
+      {
+       "name": "FBA货件产品查询",
+       "type": "apiDetail",
+       "id": 382285993,
+       "method": "POST",
+       "path": "/api/fbaShipment/shipmentItemList.json",
+       "to": "/api-382285993"
+      },
+      {
+       "name": "查询FBA货件外箱标签",
+       "type": "apiDetail",
+       "id": 51516615,
+       "method": "POST",
+       "path": "/api/fbaShipment/batchPackageLabels.json",
+       "to": "/api-51516615"
+      },
+      {
+       "name": "查询FBA货件托拍标签",
+       "type": "apiDetail",
+       "id": 51516616,
+       "method": "POST",
+       "path": "/api/fbaShipment/batchPalletLabels.json",
+       "to": "/api-51516616"
+      },
+      {
+       "name": "FBA货件产品批量查询",
+       "type": "apiDetail",
+       "id": 328123046,
+       "method": "POST",
+       "path": "/api/fbaShipment/batchQuery/shipmentItemList.json",
+       "to": "/api-328123046"
+      }
+     ]
+    },
+    {
+     "name": "头程分摊",
+     "type": "apiDetailFolder",
+     "id": 14824343,
+     "children": [
+      {
+       "name": "头程分摊列表页",
+       "type": "apiDetail",
+       "id": 74141036,
+       "method": "POST",
+       "path": "/api/fba/shippingHeadFee/pageList.json",
+       "to": "/api-74141036"
+      }
+     ]
+    },
+    {
+     "name": "成本补录单",
+     "type": "apiDetailFolder",
+     "id": 14824348,
+     "children": [
+      {
+       "name": "查询成本调整单列表",
+       "type": "apiDetail",
+       "id": 74141034,
+       "method": "POST",
+       "path": "/api/fba/cost/adjustment/pageList.json",
+       "to": "/api-74141034"
+      }
+     ]
+    },
+    {
+     "name": "物流商",
+     "type": "apiDetailFolder",
+     "id": 14824355,
+     "children": [
+      {
+       "name": "查询物流商列表",
+       "type": "apiDetail",
+       "id": 74141037,
+       "method": "POST",
+       "path": "/api/logistic/pageList.json",
+       "to": "/api-74141037"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "采购",
+   "type": "apiDetailFolder",
+   "id": 10337968,
+   "children": [
+    {
+     "name": "采购单",
+     "type": "apiDetailFolder",
+     "id": 14824472,
+     "children": [
+      {
+       "name": "采购单创建",
+       "type": "apiDetail",
+       "id": 181712559,
+       "method": "POST",
+       "path": "/api/purchase/create.json",
+       "to": "/api-181712559"
+      },
+      {
+       "name": "采购单列表",
+       "type": "apiDetail",
+       "id": 51516633,
+       "method": "POST",
+       "path": "/api/purchase/page.json",
+       "to": "/api-51516633"
+      },
+      {
+       "name": "采购单到货",
+       "type": "apiDetail",
+       "id": 51516628,
+       "method": "POST",
+       "path": "/api/purchase/arrival.json",
+       "to": "/api-51516628"
+      },
+      {
+       "name": "获取结算方式列表",
+       "type": "apiDetail",
+       "id": 52898926,
+       "method": "POST",
+       "path": "/api/paymentMethod/list.json",
+       "to": "/api-52898926"
+      },
+      {
+       "name": "采购单取消",
+       "type": "apiDetail",
+       "id": 51516630,
+       "method": "POST",
+       "path": "/api/purchase/cancel.json",
+       "to": "/api-51516630"
+      },
+      {
+       "name": "添加采购单运单号",
+       "type": "apiDetail",
+       "id": 51516634,
+       "method": "POST",
+       "path": "/api/purchase/saveTrackingInfo.json",
+       "to": "/api-51516634"
+      },
+      {
+       "name": "终止剩余到货",
+       "type": "apiDetail",
+       "id": 51516631,
+       "method": "POST",
+       "path": "/api/purchase/complete.json",
+       "to": "/api-51516631"
+      },
+      {
+       "name": "采购单下单",
+       "type": "apiDetail",
+       "id": 51516632,
+       "method": "POST",
+       "path": "/api/purchase/order.json",
+       "to": "/api-51516632"
+      },
+      {
+       "name": "商品维度结束到货",
+       "type": "apiDetail",
+       "id": 192296427,
+       "method": "POST",
+       "path": "/api/purchase/completeByItem.json",
+       "to": "/api-192296427"
+      },
+      {
+       "name": "修改预计到货时间",
+       "type": "apiDetail",
+       "id": 352501086,
+       "method": "POST",
+       "path": "/api/purchase/updatePredictArriveTime.json",
+       "to": "/api-352501086"
+      },
+      {
+       "name": "修改采购单SKU备注",
+       "type": "apiDetail",
+       "id": 352501087,
+       "method": "POST",
+       "path": "/api/purchase/updateSkuRemark.json",
+       "to": "/api-352501087"
+      },
+      {
+       "name": "修改采购单采购数量",
+       "type": "apiDetail",
+       "id": 352501088,
+       "method": "POST",
+       "path": "/api/purchase/updatePurchaseQuantity.json",
+       "to": "/api-352501088"
+      },
+      {
+       "name": "获取采购单附件",
+       "type": "apiDetail",
+       "id": 481812334,
+       "method": "POST",
+       "path": "/api/purchase/attachment.json",
+       "to": "/api-481812334"
+      }
+     ]
+    },
+    {
+     "name": "采购入库",
+     "type": "apiDetailFolder",
+     "id": 14824482,
+     "children": [
+      {
+       "name": "查询采购入库单列表",
+       "type": "apiDetail",
+       "id": 74141046,
+       "method": "POST",
+       "path": "/getStockPageList.json",
+       "to": "/api-74141046"
+      }
+     ]
+    },
+    {
+     "name": "采购退货单",
+     "type": "apiDetailFolder",
+     "id": 14824487,
+     "children": [
+      {
+       "name": "创建采购退货单",
+       "type": "apiDetail",
+       "id": 188536050,
+       "method": "POST",
+       "path": "/api/purchaseReturned/create.json",
+       "to": "/api-188536050"
+      },
+      {
+       "name": "查询采购退货单详情",
+       "type": "apiDetail",
+       "id": 74141040,
+       "method": "POST",
+       "path": "/api/purchaseReturned/details.json",
+       "to": "/api-74141040"
+      },
+      {
+       "name": "查询采购退货单列表",
+       "type": "apiDetail",
+       "id": 74141042,
+       "method": "POST",
+       "path": "/api/purchaseReturned/pageList.json",
+       "to": "/api-74141042"
+      },
+      {
+       "name": "确认退货",
+       "type": "apiDetail",
+       "id": 437972184,
+       "method": "POST",
+       "path": "/api/purchaseReturned/batchConfirmReturn.json",
+       "to": "/api-437972184"
+      }
+     ]
+    },
+    {
+     "name": "供应商",
+     "type": "apiDetailFolder",
+     "id": 14824499,
+     "children": [
+      {
+       "name": "获取供应商列表",
+       "type": "apiDetail",
+       "id": 52898927,
+       "method": "POST",
+       "path": "/api/supplier/pageList.json",
+       "to": "/api-52898927"
+      },
+      {
+       "name": "供应商创建修改",
+       "type": "apiDetail",
+       "id": 52898928,
+       "method": "POST",
+       "path": "/api/supplier/createOrUpdate.json",
+       "to": "/api-52898928"
+      }
+     ]
+    },
+    {
+     "name": "采购计划",
+     "type": "apiDetailFolder",
+     "id": 35810873,
+     "children": [
+      {
+       "name": "创建采购计划",
+       "type": "apiDetail",
+       "id": 181712560,
+       "method": "POST",
+       "path": "/api/purchasePlan/create.json",
+       "to": "/api-181712560"
+      },
+      {
+       "name": "采购计划分页查询",
+       "type": "apiDetail",
+       "id": 182977809,
+       "method": "POST",
+       "path": "/api/purchasePlan/search.json",
+       "to": "/api-182977809"
+      }
+     ]
+    },
+    {
+     "name": "采购变更",
+     "type": "apiDetailFolder",
+     "id": 36291293,
+     "children": [
+      {
+       "name": "创建采购变更单（V1.0）",
+       "type": "apiDetail",
+       "id": 185594125,
+       "method": "POST",
+       "path": "/api/purchaseChange/create.json",
+       "to": "/api-185594125"
+      },
+      {
+       "name": "创建采购变更单（V2.0）",
+       "type": "apiDetail",
+       "id": 254038550,
+       "method": "POST",
+       "path": "/api/purchaseChange/createV2.json",
+       "to": "/api-254038550"
+      },
+      {
+       "name": "分页查询采购变更单列表",
+       "type": "apiDetail",
+       "id": 480734861,
+       "method": "POST",
+       "path": "/api/purchaseChange/pageList.json",
+       "to": "/api-480734861"
+      },
+      {
+       "name": "查询采购变更单详情",
+       "type": "apiDetail",
+       "id": 480734860,
+       "method": "POST",
+       "path": "/api/purchaseChange/detail.json",
+       "to": "/api-480734860"
+      },
+      {
+       "name": "创建采购变更单（V3.0）",
+       "type": "apiDetail",
+       "id": 524315084,
+       "method": "POST",
+       "path": "/api/gw/purchase/purchaseChange/create",
+       "to": "/api-524315084"
+      }
+     ]
+    },
+    {
+     "name": "结算方式",
+     "type": "apiDetailFolder",
+     "id": 36602407,
+     "children": [
+      {
+       "name": "获取所有结算方式",
+       "type": "apiDetail",
+       "id": 187268786,
+       "method": "POST",
+       "path": "/api/paymentMethod/listAll.json",
+       "to": "/api-187268786"
+      }
+     ]
+    },
+    {
+     "name": "采购方",
+     "type": "apiDetailFolder",
+     "id": 36602408,
+     "children": [
+      {
+       "name": "采购方列表",
+       "type": "apiDetail",
+       "id": 187268787,
+       "method": "POST",
+       "path": "/api/purchasePartya/getPage.json",
+       "to": "/api-187268787"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "仓库",
+   "type": "apiDetailFolder",
+   "id": 10337965,
+   "children": [
+    {
+     "name": "仓库列表",
+     "type": "apiDetailFolder",
+     "id": 14824957,
+     "children": [
+      {
+       "name": "查询仓库列表",
+       "type": "apiDetail",
+       "id": 51516623,
+       "method": "POST",
+       "path": "/api/warehouseManage/warehouseList.json",
+       "to": "/api-51516623"
+      }
+     ]
+    },
+    {
+     "name": "库存明细",
+     "type": "apiDetailFolder",
+     "id": 14825013,
+     "children": [
+      {
+       "name": "查询库存明细",
+       "type": "apiDetail",
+       "id": 51516622,
+       "method": "POST",
+       "path": "/api/warehouseManage/warehouseItemList.json",
+       "to": "/api-51516622"
+      },
+      {
+       "name": "查询库存明细批次信息",
+       "type": "apiDetail",
+       "id": 433626708,
+       "method": "POST",
+       "path": "/api/warehouseManage/warehouseBatchList.json",
+       "to": "/api-433626708"
+      }
+     ]
+    },
+    {
+     "name": "FBA库存",
+     "type": "apiDetailFolder",
+     "id": 14825055,
+     "children": [
+      {
+       "name": "查询FBA库存明细",
+       "type": "apiDetail",
+       "id": 51516618,
+       "method": "POST",
+       "path": "/api/inventoryManage/fba/pageList.json",
+       "to": "/api-51516618"
+      }
+     ]
+    },
+    {
+     "name": "AWD库存",
+     "type": "apiDetailFolder",
+     "id": 96113258,
+     "children": [
+      {
+       "name": "查询AWD库存列表",
+       "type": "apiDetail",
+       "id": 516639279,
+       "method": "POST",
+       "path": "/api/awd/inventory/pageList.json",
+       "to": "/api-516639279"
+      }
+     ]
+    },
+    {
+     "name": "海外仓备货单",
+     "type": "apiDetailFolder",
+     "id": 14825099,
+     "children": [
+      {
+       "name": "海外仓备货单列表页（2.0）",
+       "type": "apiDetail",
+       "id": 484654830,
+       "method": "POST",
+       "path": "/api/oversea/page/v2.json",
+       "to": "/api-484654830"
+      },
+      {
+       "name": "海外仓备货单列表页（即将下线）",
+       "type": "apiDetail",
+       "id": 74141039,
+       "method": "POST",
+       "path": "/api/oversea/page.json",
+       "to": "/api-74141039"
+      },
+      {
+       "name": "海外仓备货单详情（2.0）",
+       "type": "apiDetail",
+       "id": 484654829,
+       "method": "POST",
+       "path": "/api/oversea/detail/v2.json",
+       "to": "/api-484654829"
+      },
+      {
+       "name": "海外仓备货单详情（即将下线）",
+       "type": "apiDetail",
+       "id": 74141038,
+       "method": "POST",
+       "path": "/api/oversea/detail.json",
+       "to": "/api-74141038"
+      },
+      {
+       "name": "保存海外仓备货单",
+       "type": "apiDetail",
+       "id": 146723591,
+       "method": "POST",
+       "path": "/api/oversea/save.json",
+       "to": "/api-146723591"
+      },
+      {
+       "name": "备货单批量收货",
+       "type": "apiDetail",
+       "id": 150128334,
+       "method": "POST",
+       "path": "/api/oversea/batch/receive.json",
+       "to": "/api-150128334"
+      },
+      {
+       "name": "结束剩余到货",
+       "type": "apiDetail",
+       "id": 150128335,
+       "method": "POST",
+       "path": "/api/oversea/endSurplus.json",
+       "to": "/api-150128335"
+      },
+      {
+       "name": "备货单批量收货（2.0）",
+       "type": "apiDetail",
+       "id": 172001347,
+       "method": "POST",
+       "path": "/api/oversea/batch/receive/v2.json",
+       "to": "/api-172001347"
+      },
+      {
+       "name": "结束剩余到货（2.0）",
+       "type": "apiDetail",
+       "id": 172001348,
+       "method": "POST",
+       "path": "/api/oversea/endSurplus/v2.json",
+       "to": "/api-172001348"
+      },
+      {
+       "name": "保存海外仓备货单（2.0）",
+       "type": "apiDetail",
+       "id": 172001349,
+       "method": "POST",
+       "path": "/api/oversea/save/v2.json",
+       "to": "/api-172001349"
+      },
+      {
+       "name": "批量分配库存",
+       "type": "apiDetail",
+       "id": 528263651,
+       "method": "POST",
+       "path": "/api/oversea/batchAllotStock.json",
+       "to": "/api-528263651"
+      },
+      {
+       "name": "批量删除",
+       "type": "apiDetail",
+       "id": 528263652,
+       "method": "POST",
+       "path": "/api/oversea/delete.json",
+       "to": "/api-528263652"
+      }
+     ]
+    },
+    {
+     "name": "其他入库",
+     "type": "apiDetailFolder",
+     "id": 14825126,
+     "children": [
+      {
+       "name": "其他入库单创建 (该接口将要下线，如有需要，请调V2接口：/api/warehouseInOut/inRecord/v2) ",
+       "type": "apiDetail",
+       "id": 51516621,
+       "method": "POST",
+       "path": "/api/warehouseInOut/inRecord.json",
+       "to": "/api-51516621"
+      },
+      {
+       "name": "其他入库单创建（2.0）",
+       "type": "apiDetail",
+       "id": 172001654,
+       "method": "POST",
+       "path": "/api/warehouseInOut/inRecord/v2.json",
+       "to": "/api-172001654"
+      },
+      {
+       "name": "其他入库列表页",
+       "type": "apiDetail",
+       "id": 199427642,
+       "method": "POST",
+       "path": "/api/warehouseInOut/inRecords.json",
+       "to": "/api-199427642"
+      },
+      {
+       "name": "批量确认入库",
+       "type": "apiDetail",
+       "id": 437953562,
+       "method": "POST",
+       "path": "/api/warehouseInOut/batchConfirmInRecord.json",
+       "to": "/api-437953562"
+      },
+      {
+       "name": "批量删除入库单",
+       "type": "apiDetail",
+       "id": 437953563,
+       "method": "POST",
+       "path": "/api/warehouseInOut/batchDeleteInRecord.json",
+       "to": "/api-437953563"
+      },
+      {
+       "name": "获取其他入库自定义类型",
+       "type": "apiDetail",
+       "id": 437953564,
+       "method": "POST",
+       "path": "/api/warehouseInOut/getOtherInRecordTypeManualVos.json",
+       "to": "/api-437953564"
+      },
+      {
+       "name": "撤销入库单",
+       "type": "apiDetail",
+       "id": 528242636,
+       "method": "POST",
+       "path": "/api/gw/warehouse/inorder/return",
+       "to": "/api-528242636"
+      }
+     ]
+    },
+    {
+     "name": "其他出库",
+     "type": "apiDetailFolder",
+     "id": 14825137,
+     "children": [
+      {
+       "name": "其他出库列表页",
+       "type": "apiDetail",
+       "id": 74141061,
+       "method": "POST",
+       "path": "/api/warehouseInOut/outRecords.json",
+       "to": "/api-74141061"
+      },
+      {
+       "name": "创建其他出库单(该接口将要下线，如有需要，请调V2接口：api/warehouseInOut/outRecord/v2)",
+       "type": "apiDetail",
+       "id": 146723558,
+       "method": "POST",
+       "path": "/api/warehouseInOut/outRecord.json",
+       "to": "/api-146723558"
+      },
+      {
+       "name": "创建其他出库单（2.0）",
+       "type": "apiDetail",
+       "id": 172001653,
+       "method": "POST",
+       "path": "/api/warehouseInOut/outRecord/v2.json",
+       "to": "/api-172001653"
+      },
+      {
+       "name": "删除其他出库单",
+       "type": "apiDetail",
+       "id": 399063059,
+       "method": "POST",
+       "path": "/api/warehouseInOut/deleteOutRecord.json",
+       "to": "/api-399063059"
+      },
+      {
+       "name": "批量确认出库",
+       "type": "apiDetail",
+       "id": 437965947,
+       "method": "POST",
+       "path": "/api/warehouseInOut/batchConfirmOutRecord.json",
+       "to": "/api-437965947"
+      },
+      {
+       "name": "获取其他入库自定义类型",
+       "type": "apiDetail",
+       "id": 438220143,
+       "method": "POST",
+       "path": "/api/warehouseInOut/getOtherInRecordTypeManualVos.json",
+       "to": "/api-438220143"
+      },
+      {
+       "name": "获取其他出库自定义类型",
+       "type": "apiDetail",
+       "id": 438220144,
+       "method": "POST",
+       "path": "/api/warehouseInOut/getOtherOutRecordTypeManualVos.json",
+       "to": "/api-438220144"
+      },
+      {
+       "name": "撤销出库单",
+       "type": "apiDetail",
+       "id": 528242781,
+       "method": "POST",
+       "path": "/api/gw/warehouse/outorder/return",
+       "to": "/api-528242781"
+      }
+     ]
+    },
+    {
+     "name": "调整单",
+     "type": "apiDetailFolder",
+     "id": 14825143,
+     "children": [
+      {
+       "name": "创建调整单",
+       "type": "apiDetail",
+       "id": 360743256,
+       "method": "POST",
+       "path": "/api/ware/adjust/createV2.json",
+       "to": "/api-360743256"
+      },
+      {
+       "name": "查询调整单列表",
+       "type": "apiDetail",
+       "id": 360743257,
+       "method": "POST",
+       "path": "/api/ware/adjust/pageList.json",
+       "to": "/api-360743257"
+      },
+      {
+       "name": "批量确认调整单",
+       "type": "apiDetail",
+       "id": 437950677,
+       "method": "POST",
+       "path": "/api/ware/adjust/batchConfirmAdjust.json",
+       "to": "/api-437950677"
+      }
+     ]
+    },
+    {
+     "name": "加工单",
+     "type": "apiDetailFolder",
+     "id": 14825196,
+     "children": [
+      {
+       "name": "加工单列表页",
+       "type": "apiDetail",
+       "id": 74141043,
+       "method": "POST",
+       "path": "/pi/ware/assemble/pageList.json",
+       "to": "/api-74141043"
+      },
+      {
+       "name": "加工单详情",
+       "type": "apiDetail",
+       "id": 74141041,
+       "method": "POST",
+       "path": "/api/ware/assemble/detail.json",
+       "to": "/api-74141041"
+      },
+      {
+       "name": "创建拆分单",
+       "type": "apiDetail",
+       "id": 240578466,
+       "method": "POST",
+       "path": "/api/ware/split/create.json",
+       "to": "/api-240578466"
+      },
+      {
+       "name": "拆分单列表页",
+       "type": "apiDetail",
+       "id": 240578468,
+       "method": "POST",
+       "path": "/api/ware/split/pageList.json",
+       "to": "/api-240578468"
+      },
+      {
+       "name": "查看拆分单详情",
+       "type": "apiDetail",
+       "id": 240578467,
+       "method": "POST",
+       "path": "/api/ware/split/detail.json",
+       "to": "/api-240578467"
+      }
+     ]
+    },
+    {
+     "name": "调拨单",
+     "type": "apiDetailFolder",
+     "id": 14825230,
+     "children": [
+      {
+       "name": "调拨单列表",
+       "type": "apiDetail",
+       "id": 74141045,
+       "method": "POST",
+       "path": "/api/warehouseTransfer/pageList.json",
+       "to": "/api-74141045"
+      },
+      {
+       "name": "调拨单详情",
+       "type": "apiDetail",
+       "id": 74141044,
+       "method": "POST",
+       "path": "/api/warehouseTransfer/getTransfer.json",
+       "to": "/api-74141044"
+      },
+      {
+       "name": "删除调拨单",
+       "type": "apiDetail",
+       "id": 528242536,
+       "method": "POST",
+       "path": "/api/gw/warehouse/transfer/delete",
+       "to": "/api-528242536"
+      }
+     ]
+    },
+    {
+     "name": "盘点单",
+     "type": "apiDetailFolder",
+     "id": 14825262,
+     "children": [
+      {
+       "name": "盘点单列表",
+       "type": "apiDetail",
+       "id": 74141033,
+       "method": "POST",
+       "path": "/api/inventory/count/order/page.json",
+       "to": "/api-74141033"
+      },
+      {
+       "name": "盘点单商品",
+       "type": "apiDetail",
+       "id": 74141035,
+       "method": "POST",
+       "path": "/api/inventory/count/item/page.json",
+       "to": "/api-74141035"
+      }
+     ]
+    },
+    {
+     "name": "库存流水",
+     "type": "apiDetailFolder",
+     "id": 14825295,
+     "children": [
+      {
+       "name": "获取库存流水",
+       "type": "apiDetail",
+       "id": 51516620,
+       "method": "POST",
+       "path": "/api/warehouseInOut/inOutRecords.json",
+       "to": "/api-51516620"
+      }
+     ]
+    },
+    {
+     "name": "货架管理",
+     "type": "apiDetailFolder",
+     "id": 14825336,
+     "children": [
+      {
+       "name": "货架位列表分页查询",
+       "type": "apiDetail",
+       "id": 52898929,
+       "method": "POST",
+       "path": "/api/warehouse/shelf/getPageList.json",
+       "to": "/api-52898929"
+      }
+     ]
+    },
+    {
+     "name": "移除入库单",
+     "type": "apiDetailFolder",
+     "id": 45187533,
+     "children": [
+      {
+       "name": "移除入库单列表查询",
+       "type": "apiDetail",
+       "id": 233405724,
+       "method": "POST",
+       "path": "/api/removeInboundOrder/search.json",
+       "to": "/api-233405724"
+      }
+     ]
+    },
+    {
+     "name": "装箱任务",
+     "type": "apiDetailFolder",
+     "id": 62200297,
+     "children": [
+      {
+       "name": "创建装箱明细（按箱子维度）",
+       "type": "apiDetail",
+       "id": 325184193,
+       "method": "POST",
+       "path": "/api/packing/task/createPackingListByBox.json",
+       "to": "/api-325184193"
+      },
+      {
+       "name": "结束装箱",
+       "type": "apiDetail",
+       "id": 325184194,
+       "method": "POST",
+       "path": "/api/packing/task/endPacking.json",
+       "to": "/api-325184194"
+      },
+      {
+       "name": "查询装箱任务列表",
+       "type": "apiDetail",
+       "id": 325184195,
+       "method": "POST",
+       "path": "/api/packing/task/page.json",
+       "to": "/api-325184195"
+      },
+      {
+       "name": "重新装箱",
+       "type": "apiDetail",
+       "id": 325184196,
+       "method": "POST",
+       "path": "/api/packing/task/resetPacking.json",
+       "to": "/api-325184196"
+      },
+      {
+       "name": "查询装箱任务明细",
+       "type": "apiDetail",
+       "id": 516637932,
+       "method": "POST",
+       "path": "/api/packing/task/detail.json",
+       "to": "/api-516637932"
+      },
+      {
+       "name": "创建装箱任务",
+       "type": "apiDetail",
+       "id": 528263782,
+       "method": "POST",
+       "path": "/api/packing/task/createPackingTask.json",
+       "to": "/api-528263782"
+      }
+     ]
+    },
+    {
+     "name": "库龄报表",
+     "type": "apiDetailFolder",
+     "id": 62530632,
+     "children": [
+      {
+       "name": "库龄报表列表页",
+       "type": "apiDetail",
+       "id": 327031118,
+       "method": "POST",
+       "path": "/api/warehouse/batch/age/pageList.json",
+       "to": "/api-327031118"
+      }
+     ]
+    },
+    {
+     "name": "三方仓库存",
+     "type": "apiDetailFolder",
+     "id": 95023539,
+     "children": [
+      {
+       "name": "获取三方仓库存列表",
+       "type": "apiDetail",
+       "id": 510548874,
+       "method": "POST",
+       "path": "/api/oversea/getInventory.json",
+       "to": "/api-510548874"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "数据",
+   "type": "apiDetailFolder",
+   "id": 10337963,
+   "children": [
+    {
+     "name": "销量统计",
+     "type": "apiDetailFolder",
+     "id": 77323792,
+     "children": [
+      {
+       "name": "获取销量数据",
+       "type": "apiDetail",
+       "id": 51516604,
+       "method": "POST",
+       "path": "/api/productSale/page.json",
+       "to": "/api-51516604"
+      },
+      {
+       "name": "生成销量报告",
+       "type": "apiDetail",
+       "id": 123726731,
+       "method": "POST",
+       "path": "/api/report/sale/generate.json",
+       "to": "/api-123726731"
+      }
+     ]
+    },
+    {
+     "name": "产品分析",
+     "type": "apiDetailFolder",
+     "id": 77323803,
+     "children": [
+      {
+       "name": "获取产品分析数据（新）8月底下线",
+       "type": "apiDetail",
+       "id": 319973191,
+       "method": "POST",
+       "path": "/api/productAnalyze/new/pageList.json",
+       "to": "/api-319973191"
+      },
+      {
+       "name": "获取产品分析数据（旧）8月底下线",
+       "type": "apiDetail",
+       "id": 51516603,
+       "method": "POST",
+       "path": "/api/performance/performancePageList.json",
+       "to": "/api-51516603"
+      },
+      {
+       "name": "获取产品分析数据（2.0）",
+       "type": "apiDetail",
+       "id": 474651907,
+       "method": "POST",
+       "path": "/api/productAnalyze/V2/pageList.json",
+       "to": "/api-474651907"
+      },
+      {
+       "name": "获取产品分析详情数据（2.0）",
+       "type": "apiDetail",
+       "id": 516640838,
+       "method": "POST",
+       "path": "/api/productAnalyze/V2/detail.json",
+       "to": "/api-516640838"
+      }
+     ]
+    },
+    {
+     "name": "店铺表现",
+     "type": "apiDetailFolder",
+     "id": 77324021,
+     "children": [
+      {
+       "name": "店铺表现按天查询",
+       "type": "apiDetail",
+       "id": 146414432,
+       "method": "POST",
+       "path": "/api/stats/getShopDataByDay.json",
+       "to": "/api-146414432"
+      }
+     ]
+    },
+    {
+     "name": "销售利润",
+     "type": "apiDetailFolder",
+     "id": 77324306,
+     "children": [
+      {
+       "name": "获取销售利润数据(产品) 即将下线",
+       "type": "apiDetail",
+       "id": 227646618,
+       "method": "POST",
+       "path": "/api/sale/profit/product/pageList.json",
+       "to": "/api-227646618"
+      },
+      {
+       "name": "获取销售利润数据(店铺) 即将下线",
+       "type": "apiDetail",
+       "id": 227646619,
+       "method": "POST",
+       "path": "/api/sale/profit/shop/pageList.json",
+       "to": "/api-227646619"
+      },
+      {
+       "name": "获取销售利润数据(产品)V2",
+       "type": "apiDetail",
+       "id": 424122730,
+       "method": "POST",
+       "path": "/api/sale/profit/product/v2/pageList.json",
+       "to": "/api-424122730"
+      },
+      {
+       "name": "获取销售利润数据(店铺)V2",
+       "type": "apiDetail",
+       "id": 424147159,
+       "method": "POST",
+       "path": "/api/sale/profit/shop/V2/pageList.json",
+       "to": "/api-424147159"
+      }
+     ]
+    },
+    {
+     "name": "自定义报表",
+     "type": "apiDetailFolder",
+     "id": 77324323,
+     "children": [
+      {
+       "name": "自定义报表-获取自定义报表列表",
+       "type": "apiDetail",
+       "id": 501584641,
+       "method": "POST",
+       "path": "/api/custom/report/reportList.json",
+       "to": "/api-501584641"
+      },
+      {
+       "name": "自定义报表-获取自定义报表详情",
+       "type": "apiDetail",
+       "id": 248307071,
+       "method": "POST",
+       "path": "/api/custom/report/pageList.json",
+       "to": "/api-248307071"
+      },
+      {
+       "name": "自定义报表-自定义指标分页列表",
+       "type": "apiDetail",
+       "id": 516640874,
+       "method": "POST",
+       "path": "/api/custom/report/custom/index/page.json",
+       "to": "/api-516640874"
+      },
+      {
+       "name": "自定义报表-获取自定义报表统计指标",
+       "type": "apiDetail",
+       "id": 516640873,
+       "method": "POST",
+       "path": "/api/custom/report/stat/index/list.json",
+       "to": "/api-516640873"
+      }
+     ]
+    },
+    {
+     "name": "标签管理",
+     "type": "apiDetailFolder",
+     "id": 82038705,
+     "children": [
+      {
+       "name": "查询标签对应产品/商品",
+       "type": "apiDetail",
+       "id": 437848186,
+       "method": "POST",
+       "path": "/api/stats/labelManage/getProductByLabel.json",
+       "to": "/api-437848186"
+      },
+      {
+       "name": "查询标签列表页",
+       "type": "apiDetail",
+       "id": 437848187,
+       "method": "POST",
+       "path": "/api/stats/labelManage/pageList.json",
+       "to": "/api-437848187"
+      },
+      {
+       "name": "查询产品标签列表",
+       "type": "apiDetail",
+       "id": 437848188,
+       "method": "POST",
+       "path": "/api/stats/labelManage/queryProductLabels.json",
+       "to": "/api-437848188"
+      },
+      {
+       "name": "创建手动标签",
+       "type": "apiDetail",
+       "id": 459166568,
+       "method": "POST",
+       "path": "/api/stats/labelManage/createLabel.json",
+       "to": "/api-459166568"
+      },
+      {
+       "name": "移除标签",
+       "type": "apiDetail",
+       "id": 459166570,
+       "method": "POST",
+       "path": "/api/stats/labelManage/deleteLabelRelation.json",
+       "to": "/api-459166570"
+      },
+      {
+       "name": "手动打标",
+       "type": "apiDetail",
+       "id": 459166571,
+       "method": "POST",
+       "path": "/api/stats/labelManage/saveProductLabelRelation.json",
+       "to": "/api-459166571"
+      },
+      {
+       "name": "删除手动/动态标签",
+       "type": "apiDetail",
+       "id": 459166569,
+       "method": "POST",
+       "path": "/api/stats/labelManage/deleteLabel.json",
+       "to": "/api-459166569"
+      }
+     ]
+    },
+    {
+     "name": "基础数据",
+     "type": "apiDetailFolder",
+     "id": 96113580,
+     "children": [
+      {
+       "name": "查询州省列表",
+       "type": "apiDetail",
+       "id": 516640661,
+       "method": "POST",
+       "path": "/api/stats/province/list.json",
+       "to": "/api-516640661"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "财务",
+   "type": "apiDetailFolder",
+   "id": 10337970,
+   "children": [
+    {
+     "name": "批次成本",
+     "type": "apiDetailFolder",
+     "id": 20389453,
+     "children": [
+      {
+       "name": "获取FBA仓库列表数据",
+       "type": "apiDetail",
+       "id": 252647060,
+       "method": "POST",
+       "path": "/api/financial/batchCost/getFBAWarehousePageList.json",
+       "to": "/api-252647060"
+      },
+      {
+       "name": "获取批次入库数据",
+       "type": "apiDetail",
+       "id": 103235384,
+       "method": "POST",
+       "path": "/api/financial/batchCost/getInboundPageList.json",
+       "to": "/api-103235384"
+      },
+      {
+       "name": "获取批次出库数据",
+       "type": "apiDetail",
+       "id": 103235385,
+       "method": "POST",
+       "path": "/api/financial/batchCost/getOutboundPageList.json",
+       "to": "/api-103235385"
+      },
+      {
+       "name": "获取货件签收数据",
+       "type": "apiDetail",
+       "id": 198592414,
+       "method": "POST",
+       "path": "/api/financial/batchCost/getShipmentPageList.json",
+       "to": "/api-198592414"
+      },
+      {
+       "name": "重置成本导入",
+       "type": "apiDetail",
+       "id": 491802966,
+       "method": "POST",
+       "path": "/api/financial/batchCost/importResetCostV2.json",
+       "to": "/api-491802966"
+      }
+     ]
+    },
+    {
+     "name": "应收报表（即将下线）",
+     "type": "apiDetailFolder",
+     "id": 32506513,
+     "children": [
+      {
+       "name": "获取应收报表数据",
+       "type": "apiDetail",
+       "id": 165756004,
+       "method": "POST",
+       "path": "/api/financial/accountReceivable/pageList.json",
+       "to": "/api-165756004"
+      }
+     ]
+    },
+    {
+     "name": "结算中心（即将下线）",
+     "type": "apiDetailFolder",
+     "id": 36418061,
+     "children": [
+      {
+       "name": "结算汇总-分页查询",
+       "type": "apiDetail",
+       "id": 186297246,
+       "method": "POST",
+       "path": "/api/financial/selectSettlementSummaryGroupPage.json",
+       "to": "/api-186297246"
+      },
+      {
+       "name": "查询结算明细",
+       "type": "apiDetail",
+       "id": 74141060,
+       "method": "POST",
+       "path": "/api/settlementDetail/selectSettlementDetailPage.json",
+       "to": "/api-74141060"
+      }
+     ]
+    },
+    {
+     "name": "结算管理（即将下线）",
+     "type": "apiDetailFolder",
+     "id": 39781392,
+     "children": [
+      {
+       "name": "查询发货与结算记录",
+       "type": "apiDetail",
+       "id": 204485188,
+       "method": "POST",
+       "path": "/api/financial/shippingSettlementPageList.json",
+       "to": "/api-204485188"
+      }
+     ]
+    },
+    {
+     "name": "结算利润（已下线）",
+     "type": "apiDetailFolder",
+     "id": 40338298,
+     "children": [
+      {
+       "name": "按日利润报表-ASIN",
+       "type": "apiDetail",
+       "id": 207463418,
+       "method": "POST",
+       "path": "/api/financial/selectDailyFinancialAsin.json",
+       "to": "/api-207463418"
+      },
+      {
+       "name": "按日利润报表-父ASIN",
+       "type": "apiDetail",
+       "id": 207463421,
+       "method": "POST",
+       "path": "/api/financial/selectDailyFinancialParentAsin.json",
+       "to": "/api-207463421"
+      },
+      {
+       "name": "按日利润报表-MSKU",
+       "type": "apiDetail",
+       "id": 207463420,
+       "method": "POST",
+       "path": "/api/financial/selectDailyFinancialMsku.json",
+       "to": "/api-207463420"
+      },
+      {
+       "name": "按日利润报表-SKU",
+       "type": "apiDetail",
+       "id": 207463424,
+       "method": "POST",
+       "path": "/api/financial/selectDailyFinancialSku.json",
+       "to": "/api-207463424"
+      },
+      {
+       "name": "按日利润报表-SPU",
+       "type": "apiDetail",
+       "id": 207463425,
+       "method": "POST",
+       "path": "/api/financial/selectDailyFinancialSpu.json",
+       "to": "/api-207463425"
+      },
+      {
+       "name": "按日利润报表-开发员",
+       "type": "apiDetail",
+       "id": 207463419,
+       "method": "POST",
+       "path": "/api/financial/selectDailyFinancialDeveloper.json",
+       "to": "/api-207463419"
+      },
+      {
+       "name": "按日利润报表-业务员",
+       "type": "apiDetail",
+       "id": 207463422,
+       "method": "POST",
+       "path": "/api/financial/selectDailyFinancialSalesman.json",
+       "to": "/api-207463422"
+      },
+      {
+       "name": "按日利润报表-店铺",
+       "type": "apiDetail",
+       "id": 207463423,
+       "method": "POST",
+       "path": "/api/financial/selectDailyFinancialShop.json",
+       "to": "/api-207463423"
+      }
+     ]
+    },
+    {
+     "name": "利润报表（即将下线）",
+     "type": "apiDetailFolder",
+     "id": 20813147,
+     "children": [
+      {
+       "name": "利润报表-查询ASIN",
+       "type": "apiDetail",
+       "id": 105508483,
+       "method": "POST",
+       "path": "/api/financial/asin.json",
+       "to": "/api-105508483"
+      },
+      {
+       "name": "利润报表-查询开发员",
+       "type": "apiDetail",
+       "id": 105508484,
+       "method": "POST",
+       "path": "/api/financial/developer.json",
+       "to": "/api-105508484"
+      },
+      {
+       "name": "利润报表-查询MSKU",
+       "type": "apiDetail",
+       "id": 105508485,
+       "method": "POST",
+       "path": "/api/financial/msku.json",
+       "to": "/api-105508485"
+      },
+      {
+       "name": "利润报表-查询订单",
+       "type": "apiDetail",
+       "id": 105508486,
+       "method": "POST",
+       "path": "/api/financial/order.json",
+       "to": "/api-105508486"
+      },
+      {
+       "name": "利润报表-查询父ASIN",
+       "type": "apiDetail",
+       "id": 105508487,
+       "method": "POST",
+       "path": "/api/financial/pasin.json",
+       "to": "/api-105508487"
+      },
+      {
+       "name": "利润报表-查询业务员",
+       "type": "apiDetail",
+       "id": 105508488,
+       "method": "POST",
+       "path": "/api/financial/sales.json",
+       "to": "/api-105508488"
+      },
+      {
+       "name": "利润报表-结算总览",
+       "type": "apiDetail",
+       "id": 105508489,
+       "method": "POST",
+       "path": "/api/financial/selectGroupPage.json",
+       "to": "/api-105508489"
+      },
+      {
+       "name": "利润报表-查询店铺",
+       "type": "apiDetail",
+       "id": 105508490,
+       "method": "POST",
+       "path": "/api/financial/shop.json",
+       "to": "/api-105508490"
+      },
+      {
+       "name": "利润报表-查询店铺汇总",
+       "type": "apiDetail",
+       "id": 105508491,
+       "method": "POST",
+       "path": "/api/financial/shopSummary.json",
+       "to": "/api-105508491"
+      },
+      {
+       "name": "利润报表-查询SKU",
+       "type": "apiDetail",
+       "id": 105508492,
+       "method": "POST",
+       "path": "/api/financial/sku.json",
+       "to": "/api-105508492"
+      }
+     ]
+    },
+    {
+     "name": "应收报表V2",
+     "type": "apiDetailFolder",
+     "id": 75194031,
+     "children": [
+      {
+       "name": "获取应收报表数据",
+       "type": "apiDetail",
+       "id": 399397922,
+       "method": "POST",
+       "path": "/api/financial/v2/accountReceivable/pageList.json",
+       "to": "/api-399397922"
+      }
+     ]
+    },
+    {
+     "name": "结算中心V2",
+     "type": "apiDetailFolder",
+     "id": 75194035,
+     "children": [
+      {
+       "name": "查询结算明细-分页查询",
+       "type": "apiDetail",
+       "id": 399397941,
+       "method": "POST",
+       "path": "/api/financial/v2/settlementSummary/detailPage.json",
+       "to": "/api-399397941"
+      },
+      {
+       "name": "结算汇总-分页查询",
+       "type": "apiDetail",
+       "id": 399397942,
+       "method": "POST",
+       "path": "/api/financial/v2/settlementSummary/groupPage.json",
+       "to": "/api-399397942"
+      }
+     ]
+    },
+    {
+     "name": "发货与结算V2",
+     "type": "apiDetailFolder",
+     "id": 75194036,
+     "children": [
+      {
+       "name": "查询发货与结算记录",
+       "type": "apiDetail",
+       "id": 399397943,
+       "method": "POST",
+       "path": "/api/financial/v2/shippingSettlementPageList.json",
+       "to": "/api-399397943"
+      }
+     ]
+    },
+    {
+     "name": "结算利润V2",
+     "type": "apiDetailFolder",
+     "id": 75194032,
+     "children": [
+      {
+       "name": "结算利润-ASIN",
+       "type": "apiDetail",
+       "id": 399397923,
+       "method": "POST",
+       "path": "/api/financial/v2/dailyProfit/asin.json",
+       "to": "/api-399397923"
+      },
+      {
+       "name": "结算利润-开发员",
+       "type": "apiDetail",
+       "id": 399397924,
+       "method": "POST",
+       "path": "/api/financial/v2/dailyProfit/developer.json",
+       "to": "/api-399397924"
+      },
+      {
+       "name": "结算利润-MSKU",
+       "type": "apiDetail",
+       "id": 399397925,
+       "method": "POST",
+       "path": "/api/financial/v2/dailyProfit/msku.json",
+       "to": "/api-399397925"
+      },
+      {
+       "name": "结算利润-父ASIN",
+       "type": "apiDetail",
+       "id": 399397926,
+       "method": "POST",
+       "path": "/api/financial/v2/dailyProfit/parentAsin.json",
+       "to": "/api-399397926"
+      },
+      {
+       "name": "结算利润-业务员",
+       "type": "apiDetail",
+       "id": 399397927,
+       "method": "POST",
+       "path": "/api/financial/v2/dailyProfit/salesMan.json",
+       "to": "/api-399397927"
+      },
+      {
+       "name": "结算利润-店铺",
+       "type": "apiDetail",
+       "id": 399397928,
+       "method": "POST",
+       "path": "/api/financial/v2/dailyProfit/shop.json",
+       "to": "/api-399397928"
+      },
+      {
+       "name": "结算利润-SKU",
+       "type": "apiDetail",
+       "id": 399397929,
+       "method": "POST",
+       "path": "/api/financial/v2/dailyProfit/sku.json",
+       "to": "/api-399397929"
+      },
+      {
+       "name": "结算利润-SPU",
+       "type": "apiDetail",
+       "id": 399397930,
+       "method": "POST",
+       "path": "/api/financial/v2/dailyProfit/spu.json",
+       "to": "/api-399397930"
+      }
+     ]
+    },
+    {
+     "name": "利润报表V2",
+     "type": "apiDetailFolder",
+     "id": 75194033,
+     "children": [
+      {
+       "name": "利润报表-ASIN",
+       "type": "apiDetail",
+       "id": 399397931,
+       "method": "POST",
+       "path": "/api/financial/v2/monthProfit/asin.json",
+       "to": "/api-399397931"
+      },
+      {
+       "name": "利润报表-开发员",
+       "type": "apiDetail",
+       "id": 399397932,
+       "method": "POST",
+       "path": "/api/financial/v2/monthProfit/developer.json",
+       "to": "/api-399397932"
+      },
+      {
+       "name": "利润报表-MSKU",
+       "type": "apiDetail",
+       "id": 399397933,
+       "method": "POST",
+       "path": "/api/financial/v2/monthProfit/msku.json",
+       "to": "/api-399397933"
+      },
+      {
+       "name": "利润报表-父ASIN",
+       "type": "apiDetail",
+       "id": 399397934,
+       "method": "POST",
+       "path": "/api/financial/v2/monthProfit/parentAsin.json",
+       "to": "/api-399397934"
+      },
+      {
+       "name": "利润报表-业务员",
+       "type": "apiDetail",
+       "id": 399397935,
+       "method": "POST",
+       "path": "/api/financial/v2/monthProfit/salesMan.json",
+       "to": "/api-399397935"
+      },
+      {
+       "name": "利润报表-店铺",
+       "type": "apiDetail",
+       "id": 399397936,
+       "method": "POST",
+       "path": "/api/financial/v2/monthProfit/shop.json",
+       "to": "/api-399397936"
+      },
+      {
+       "name": "利润报表-店铺汇总",
+       "type": "apiDetail",
+       "id": 399397937,
+       "method": "POST",
+       "path": "/api/financial/v2/monthProfit/shopSummary.json",
+       "to": "/api-399397937"
+      },
+      {
+       "name": "利润报表-SKU",
+       "type": "apiDetail",
+       "id": 399397938,
+       "method": "POST",
+       "path": "/api/financial/v2/monthProfit/sku.json",
+       "to": "/api-399397938"
+      },
+      {
+       "name": "利润报表-SPU",
+       "type": "apiDetail",
+       "id": 399397939,
+       "method": "POST",
+       "path": "/api/financial/v2/monthProfit/spu.json",
+       "to": "/api-399397939"
+      },
+      {
+       "name": "利润报表-订单",
+       "type": "apiDetail",
+       "id": 399397940,
+       "method": "POST",
+       "path": "/api/financial/v2/order.json",
+       "to": "/api-399397940"
+      }
+     ]
+    },
+    {
+     "name": "广告发票",
+     "type": "apiDetailFolder",
+     "id": 81721575,
+     "children": [
+      {
+       "name": "查询发票详情",
+       "type": "apiDetail",
+       "id": 436025995,
+       "method": "POST",
+       "path": "/api/finance/adInvoice/getInvoiceDetail.json",
+       "to": "/api-436025995"
+      },
+      {
+       "name": "查询广告发票详情",
+       "type": "apiDetail",
+       "id": 436025996,
+       "method": "POST",
+       "path": "/api/finance/adInvoice/pageList.json",
+       "to": "/api-436025996"
+      }
+     ]
+    },
+    {
+     "name": "广告发票(灰度功能)",
+     "type": "apiDetailFolder",
+     "id": 81721576,
+     "children": [
+      {
+       "name": "查询发票分摊详情",
+       "type": "apiDetail",
+       "id": 436025997,
+       "method": "POST",
+       "path": "/api/finance/adInvoice/v2/allocationDetail.json",
+       "to": "/api-436025997"
+      },
+      {
+       "name": "查询广告发票列表",
+       "type": "apiDetail",
+       "id": 436025998,
+       "method": "POST",
+       "path": "/api/finance/adInvoice/v2/pageList.json",
+       "to": "/api-436025998"
+      }
+     ]
+    },
+    {
+     "name": "请付款",
+     "type": "apiDetailFolder",
+     "id": 81721577,
+     "children": [
+      {
+       "name": "查询请款池-测评订单",
+       "type": "apiDetail",
+       "id": 436025999,
+       "method": "POST",
+       "path": "/api/finance/evaluationOrderReconciliation/pageList.json",
+       "to": "/api-436025999"
+      },
+      {
+       "name": "查询请款池-物流商",
+       "type": "apiDetail",
+       "id": 436026000,
+       "method": "POST",
+       "path": "/api/finance/logisticSettlement/pageList.json",
+       "to": "/api-436026000"
+      },
+      {
+       "name": "查询请款池-其他费用（已下线）",
+       "type": "apiDetail",
+       "id": 436026001,
+       "method": "POST",
+       "path": "/api/finance/otherFeeReconciliation/pageList.json",
+       "to": "/api-436026001"
+      },
+      {
+       "name": "查询请款池-其他费用V2",
+       "type": "apiDetail",
+       "id": 501770453,
+       "method": "POST",
+       "path": "/api/finance/otherFeeReconciliation/pageListV2.json",
+       "to": "/api-501770453"
+      },
+      {
+       "name": "查询付款单列表",
+       "type": "apiDetail",
+       "id": 436026002,
+       "method": "POST",
+       "path": "/api/finance/paymentOrder/pageList.json",
+       "to": "/api-436026002"
+      },
+      {
+       "name": "查询请款池-海外仓备货单",
+       "type": "apiDetail",
+       "id": 436026003,
+       "method": "POST",
+       "path": "/api/finance/pickingListReconciliation/pageList.json",
+       "to": "/api-436026003"
+      },
+      {
+       "name": "查询请款池-采购单",
+       "type": "apiDetail",
+       "id": 436026004,
+       "method": "POST",
+       "path": "/api/finance/purchaseReconciliation/pageList.json",
+       "to": "/api-436026004"
+      },
+      {
+       "name": "查询收款单列表",
+       "type": "apiDetail",
+       "id": 436026005,
+       "method": "POST",
+       "path": "/api/finance/receiptOrder/pageList.json",
+       "to": "/api-436026005"
+      },
+      {
+       "name": "查询请款单列表",
+       "type": "apiDetail",
+       "id": 436026006,
+       "method": "POST",
+       "path": "/api/finance/requisitionOrder/pageList.json",
+       "to": "/api-436026006"
+      },
+      {
+       "name": "查询请款池-发货单",
+       "type": "apiDetail",
+       "id": 436026007,
+       "method": "POST",
+       "path": "/api/finance/shippingOrderReconciliation/pageList.json",
+       "to": "/api-436026007"
+      },
+      {
+       "name": "查询请款池-SKU",
+       "type": "apiDetail",
+       "id": 436026008,
+       "method": "POST",
+       "path": "/api/finance/skuReconciliation/pageList.json",
+       "to": "/api-436026008"
+      },
+      {
+       "name": "查询请款池-入库单",
+       "type": "apiDetail",
+       "id": 436026009,
+       "method": "POST",
+       "path": "/api/finance/stockReconciliation/pageList.json",
+       "to": "/api-436026009"
+      },
+      {
+       "name": "查询付款方式列表",
+       "type": "apiDetail",
+       "id": 507112776,
+       "method": "POST",
+       "path": "/api/payment/getPaymentMethod.json",
+       "to": "/api-507112776"
+      }
+     ]
+    },
+    {
+     "name": "库存报表",
+     "type": "apiDetailFolder",
+     "id": 81721578,
+     "children": [
+      {
+       "name": "FBA仓库-明细",
+       "type": "apiDetail",
+       "id": 436026010,
+       "method": "POST",
+       "path": "/api/finance/fbaStockDetail/pageList.json",
+       "to": "/api-436026010"
+      },
+      {
+       "name": "FBA仓库-汇总",
+       "type": "apiDetail",
+       "id": 436026011,
+       "method": "POST",
+       "path": "/api/finance/fbaWarehouseSummary/pageList.json",
+       "to": "/api-436026011"
+      }
+     ]
+    },
+    {
+     "name": "延迟交易",
+     "type": "apiDetailFolder",
+     "id": 84291725,
+     "children": [
+      {
+       "name": "延迟金额",
+       "type": "apiDetail",
+       "id": 450303866,
+       "method": "POST",
+       "path": "/api/finAmz/deferredOrder/deferredAmountList.json",
+       "to": "/api-450303866"
+      },
+      {
+       "name": "延迟交易",
+       "type": "apiDetail",
+       "id": 450303867,
+       "method": "POST",
+       "path": "/api/finAmz/deferredOrder/deferredOrderList.json",
+       "to": "/api-450303867"
+      },
+      {
+       "name": "月末延迟",
+       "type": "apiDetail",
+       "id": 450303868,
+       "method": "POST",
+       "path": "/api/finAmz/deferredOrder/renderMonthEndDelayList.json",
+       "to": "/api-450303868"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "工具",
+   "type": "apiDetailFolder",
+   "id": 53102297,
+   "children": [
+    {
+     "name": "打印标签",
+     "type": "apiDetailFolder",
+     "id": 77331949,
+     "children": [
+      {
+       "name": "打印FNSKU标签",
+       "type": "apiDetail",
+       "id": 276159768,
+       "method": "POST",
+       "path": "/api/print/fnskuLabel.json",
+       "to": "/api-276159768"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "设置",
+   "type": "apiDetailFolder",
+   "id": 72147832,
+   "children": [
+    {
+     "name": "汇率设置",
+     "type": "apiDetailFolder",
+     "id": 72147804,
+     "children": [
+      {
+       "name": "汇率列表",
+       "type": "apiDetail",
+       "id": 381980290,
+       "method": "POST",
+       "path": "/api/rate/open/pageList.json",
+       "to": "/api-381980290"
+      }
+     ]
+    },
+    {
+     "name": "子账号",
+     "type": "apiDetailFolder",
+     "id": 77327635,
+     "children": [
+      {
+       "name": "获取子账号列表",
+       "type": "apiDetail",
+       "id": 51516594,
+       "method": "POST",
+       "path": "/api/account/getSubUserPage.json",
+       "to": "/api-51516594"
+      }
+     ]
+    },
+    {
+     "name": "店铺授权",
+     "type": "apiDetailFolder",
+     "id": 77331167,
+     "children": [
+      {
+       "name": "获取店铺列表",
+       "type": "apiDetail",
+       "id": 51516635,
+       "method": "POST",
+       "path": "/api/shop/pageList.json",
+       "to": "/api-51516635"
+      },
+      {
+       "name": "获取自定义店铺列表",
+       "type": "apiDetail",
+       "id": 519875183,
+       "method": "POST",
+       "path": "/api/shop/custom/list.json",
+       "to": "/api-519875183"
+      }
+     ]
+    },
+    {
+     "name": "自定义字段",
+     "type": "apiDetailFolder",
+     "id": 77333645,
+     "children": [
+      {
+       "name": "自定义字段列表",
+       "type": "apiDetail",
+       "id": 383488738,
+       "method": "POST",
+       "path": "/api/customField/list.json",
+       "to": "/api-383488738"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "Feed",
+   "type": "apiDetailFolder",
+   "id": 17281530,
+   "children": [
+    {
+     "name": "提交Feed",
+     "type": "apiDetailFolder",
+     "id": 77324868,
+     "children": [
+      {
+       "name": "提交Feed",
+       "type": "apiDetail",
+       "id": 86977620,
+       "method": "POST",
+       "path": "/api/feed/submitFeed.json",
+       "to": "/api-86977620"
+      },
+      {
+       "name": "查询Feed执行情况",
+       "type": "apiDetail",
+       "id": 86977618,
+       "method": "POST",
+       "path": "/api/feed/getFeedResponse.json",
+       "to": "/api-86977618"
+      },
+      {
+       "name": "获取Feed处理结果",
+       "type": "apiDetail",
+       "id": 86977619,
+       "method": "POST",
+       "path": "/api/feed/getFeedResult.json",
+       "to": "/api-86977619"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "报告中心",
+   "type": "apiDetailFolder",
+   "id": 77369633,
+   "children": [
+    {
+     "name": "亚马逊原报告",
+     "type": "apiDetailFolder",
+     "id": 77370221,
+     "children": [
+      {
+       "name": "Amazon原表下载-生成任务",
+       "type": "apiDetail",
+       "id": 52761476,
+       "method": "POST",
+       "path": "/api/report/center/add.json",
+       "to": "/api-52761476"
+      },
+      {
+       "name": "Amazon原表下载-查询任务进度",
+       "type": "apiDetail",
+       "id": 52761475,
+       "method": "POST",
+       "path": "/api/report/center/pageList.json",
+       "to": "/api-52761475"
+      }
+     ]
+    },
+    {
+     "name": "赛狐报告",
+     "type": "apiDetailFolder",
+     "id": 21797950,
+     "children": [
+      {
+       "name": "创建报告任务",
+       "type": "apiDetail",
+       "id": 110499331,
+       "method": "POST",
+       "path": "/api/report/center/task/createTask.json",
+       "to": "/api-110499331"
+      },
+      {
+       "name": "获取报告",
+       "type": "apiDetail",
+       "id": 110499332,
+       "method": "POST",
+       "path": "/api/report/center/task/getTaskResult.json",
+       "to": "/api-110499332"
+      }
+     ]
+    },
+    {
+     "name": "插件获取报告",
+     "type": "apiDetailFolder",
+     "id": 77370298,
+     "children": [
+      {
+       "name": "插件获取报告",
+       "type": "apiDetail",
+       "id": 410910348,
+       "method": "POST",
+       "path": "/api/report/center/task/getPlugPageList.json",
+       "to": "/api-410910348"
+      }
+     ]
+    },
+    {
+     "name": "报表管理",
+     "type": "apiDetailFolder",
+     "id": 77323870,
+     "children": [
+      {
+       "name": "获取Amazon赔偿报告",
+       "type": "apiDetail",
+       "id": 51516602,
+       "method": "POST",
+       "path": "/api/compensate/pageList.json",
+       "to": "/api-51516602"
+      },
+      {
+       "name": "获取Amazon盘库报告",
+       "type": "apiDetail",
+       "id": 51516605,
+       "method": "POST",
+       "path": "/api/report/getFbaInventoryAdjustmentsPage.json",
+       "to": "/api-51516605"
+      },
+      {
+       "name": "获取Amazon长期仓储费报告",
+       "type": "apiDetail",
+       "id": 51516606,
+       "method": "POST",
+       "path": "/api/report/getFbaLongStorageFeePage.json",
+       "to": "/api-51516606"
+      },
+      {
+       "name": "获取Amazon移除货件报告",
+       "type": "apiDetail",
+       "id": 51516607,
+       "method": "POST",
+       "path": "/api/report/getFbaRemovalShipmentPage.json",
+       "to": "/api-51516607"
+      },
+      {
+       "name": "获取Amazon月仓储费报告",
+       "type": "apiDetail",
+       "id": 51516608,
+       "method": "POST",
+       "path": "/api/report/getFbaStorageFeePage.json",
+       "to": "/api-51516608"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "多平台",
+   "type": "apiDetailFolder",
+   "id": 66984885,
+   "children": [
+    {
+     "name": "销售",
+     "type": "apiDetailFolder",
+     "id": 79163150,
+     "children": [
+      {
+       "name": "获取AliExpress在线产品（子体）",
+       "type": "apiDetail",
+       "id": 421782541,
+       "method": "POST",
+       "path": "/api/multiplatform/aliexpress/product/getChildInfo.json",
+       "to": "/api-421782541"
+      },
+      {
+       "name": "获取AliExpress在线产品（父体）",
+       "type": "apiDetail",
+       "id": 421782542,
+       "method": "POST",
+       "path": "/api/multiplatform/aliexpress/product/getParentPageList.json",
+       "to": "/api-421782542"
+      },
+      {
+       "name": "获取eBay在线产品（子体）",
+       "type": "apiDetail",
+       "id": 421782543,
+       "method": "POST",
+       "path": "/api/multiplatform/ebay/product/getChildPageList.json",
+       "to": "/api-421782543"
+      },
+      {
+       "name": "获取eBay在线产品（父体）",
+       "type": "apiDetail",
+       "id": 421782544,
+       "method": "POST",
+       "path": "/api/multiplatform/ebay/product/getParentPageList.json",
+       "to": "/api-421782544"
+      },
+      {
+       "name": "获取SHEIN在线产品（子体）",
+       "type": "apiDetail",
+       "id": 421782545,
+       "method": "POST",
+       "path": "/api/multiplatform/shein/product/getChildInfo.json",
+       "to": "/api-421782545"
+      },
+      {
+       "name": "获取SHEIN在线产品（父体）",
+       "type": "apiDetail",
+       "id": 421782546,
+       "method": "POST",
+       "path": "/api/multiplatform/shein/product/getParentPageList.json",
+       "to": "/api-421782546"
+      },
+      {
+       "name": "获取Shopify在线产品（子体）",
+       "type": "apiDetail",
+       "id": 421782547,
+       "method": "POST",
+       "path": "/api/multiplatform/shopify/product/getChildList.json",
+       "to": "/api-421782547"
+      },
+      {
+       "name": "获取Shopify在线产品（父体）",
+       "type": "apiDetail",
+       "id": 421782548,
+       "method": "POST",
+       "path": "/api/multiplatform/shopify/product/getParentPageList.json",
+       "to": "/api-421782548"
+      },
+      {
+       "name": "获取Temu跨境店的在线产品（子体）",
+       "type": "apiDetail",
+       "id": 421782551,
+       "method": "POST",
+       "path": "/api/multiplatform/temu/product/getChildInfo.json",
+       "to": "/api-421782551"
+      },
+      {
+       "name": "获取Temu跨境店的在线产品（父体）",
+       "type": "apiDetail",
+       "id": 421782552,
+       "method": "POST",
+       "path": "/api/multiplatform/temu/product/getParentPageList.json",
+       "to": "/api-421782552"
+      },
+      {
+       "name": "获取TikTok在线产品（全托子体）",
+       "type": "apiDetail",
+       "id": 421782553,
+       "method": "POST",
+       "path": "/api/multiplatform/tiktok/fullyManaged/product/getChildInfo.json",
+       "to": "/api-421782553"
+      },
+      {
+       "name": "获取TikTok在线产品（全托父体）",
+       "type": "apiDetail",
+       "id": 421782554,
+       "method": "POST",
+       "path": "/api/multiplatform/tiktok/fullyManaged/product/getParentPageList.json",
+       "to": "/api-421782554"
+      },
+      {
+       "name": "获取TikTok在线产品（自营店全球商品--子体）",
+       "type": "apiDetail",
+       "id": 421782555,
+       "method": "POST",
+       "path": "/api/multiplatform/tiktok/global/product/getChildInfo.json",
+       "to": "/api-421782555"
+      },
+      {
+       "name": "获取TikTok在线产品（自营店全球商品--父体）",
+       "type": "apiDetail",
+       "id": 421782556,
+       "method": "POST",
+       "path": "/api/multiplatform/tiktok/global/product/getParentPageList.json",
+       "to": "/api-421782556"
+      },
+      {
+       "name": "获取TikTok在线产品（自营店铺商品-子体）",
+       "type": "apiDetail",
+       "id": 421782557,
+       "method": "POST",
+       "path": "/api/multiplatform/tiktok/shop/product/getChildInfo.json",
+       "to": "/api-421782557"
+      },
+      {
+       "name": "获取TikTok在线产品（自营店铺商品-父体）",
+       "type": "apiDetail",
+       "id": 421782558,
+       "method": "POST",
+       "path": "/api/multiplatform/tiktok/shop/product/getParentPageList.json",
+       "to": "/api-421782558"
+      },
+      {
+       "name": "获取Walmart在线产品（子体）",
+       "type": "apiDetail",
+       "id": 421782559,
+       "method": "POST",
+       "path": "/api/multiplatform/walmart/product/getChildInfo.json",
+       "to": "/api-421782559"
+      },
+      {
+       "name": "获取Walmart在线产品（父体）",
+       "type": "apiDetail",
+       "id": 421782560,
+       "method": "POST",
+       "path": "/api/multiplatform/walmart/product/getParentPageList.json",
+       "to": "/api-421782560"
+      },
+      {
+       "name": "Cdiscount在线商品分页查询。",
+       "type": "apiDetail",
+       "id": 530797709,
+       "method": "POST",
+       "path": "/openapi/multiplatform/cdiscount/page",
+       "to": "/api-530797709"
+      },
+      {
+       "name": "Coupang在线商品分页查询。",
+       "type": "apiDetail",
+       "id": 530797710,
+       "method": "POST",
+       "path": "/openapi/multiplatform/coupang/page",
+       "to": "/api-530797710"
+      },
+      {
+       "name": "Coupang父商品下全部子商品。",
+       "type": "apiDetail",
+       "id": 530797711,
+       "method": "POST",
+       "path": "/openapi/multiplatform/coupang/children",
+       "to": "/api-530797711"
+      },
+      {
+       "name": "Lazada在线商品分页查询。",
+       "type": "apiDetail",
+       "id": 530797712,
+       "method": "POST",
+       "path": "/openapi/multiplatform/lazada/page",
+       "to": "/api-530797712"
+      },
+      {
+       "name": "Lazada父商品下全部子商品。",
+       "type": "apiDetail",
+       "id": 530797713,
+       "method": "POST",
+       "path": "/openapi/multiplatform/lazada/children",
+       "to": "/api-530797713"
+      },
+      {
+       "name": "Mercado 跨境 userProduct 父体分页，响应含完整 itemList。",
+       "type": "apiDetail",
+       "id": 530797714,
+       "method": "POST",
+       "path": "/openapi/multiplatform/mercado/cross-user/page",
+       "to": "/api-530797714"
+      },
+      {
+       "name": "Mercado 跨境全球商品父体分页。",
+       "type": "apiDetail",
+       "id": 530797715,
+       "method": "POST",
+       "path": "/openapi/multiplatform/mercado/cross-global/page",
+       "to": "/api-530797715"
+      },
+      {
+       "name": "Mercado 跨境全球父商品下全部子商品。",
+       "type": "apiDetail",
+       "id": 530797716,
+       "method": "POST",
+       "path": "/openapi/multiplatform/mercado/cross-global/children",
+       "to": "/api-530797716"
+      },
+      {
+       "name": "Mercado 跨境店铺商品父体分页。",
+       "type": "apiDetail",
+       "id": 530797717,
+       "method": "POST",
+       "path": "/openapi/multiplatform/mercado/cross-shop/page",
+       "to": "/api-530797717"
+      },
+      {
+       "name": "Mercado 跨境店铺父商品下全部子商品。",
+       "type": "apiDetail",
+       "id": 530797718,
+       "method": "POST",
+       "path": "/openapi/multiplatform/mercado/cross-shop/children",
+       "to": "/api-530797718"
+      },
+      {
+       "name": "Otto在线商品分页查询。",
+       "type": "apiDetail",
+       "id": 530797719,
+       "method": "POST",
+       "path": "/openapi/multiplatform/otto/page",
+       "to": "/api-530797719"
+      },
+      {
+       "name": "Otto父商品下全部子商品。",
+       "type": "apiDetail",
+       "id": 530797720,
+       "method": "POST",
+       "path": "/openapi/multiplatform/otto/children",
+       "to": "/api-530797720"
+      },
+      {
+       "name": "Ozon在线商品分页查询。",
+       "type": "apiDetail",
+       "id": 530797721,
+       "method": "POST",
+       "path": "/openapi/multiplatform/ozon/page",
+       "to": "/api-530797721"
+      },
+      {
+       "name": "Rakuten 在线子商品分页。",
+       "type": "apiDetail",
+       "id": 530797722,
+       "method": "POST",
+       "path": "/openapi/multiplatform/rakuten/getChildInfo",
+       "to": "/api-530797722"
+      },
+      {
+       "name": "Rakuten 在线父商品分页。",
+       "type": "apiDetail",
+       "id": 530797723,
+       "method": "POST",
+       "path": "/openapi/multiplatform/rakuten/getParentPageList",
+       "to": "/api-530797723"
+      },
+      {
+       "name": "Shopee 店铺商品父体分页，列表最多附带五个子体。",
+       "type": "apiDetail",
+       "id": 530797724,
+       "method": "POST",
+       "path": "/openapi/multiplatform/shopee/shop/page",
+       "to": "/api-530797724"
+      },
+      {
+       "name": "Shopee 店铺父商品下的全部子体。",
+       "type": "apiDetail",
+       "id": 530797725,
+       "method": "POST",
+       "path": "/openapi/multiplatform/shopee/shop/children",
+       "to": "/api-530797725"
+      },
+      {
+       "name": "Wayfair 在线 SKU 分页。",
+       "type": "apiDetail",
+       "id": 530797726,
+       "method": "POST",
+       "path": "/openapi/multiplatform/wayfair/getPageList",
+       "to": "/api-530797726"
+      },
+      {
+       "name": "全球商品父体分页。",
+       "type": "apiDetail",
+       "id": 530797727,
+       "method": "POST",
+       "path": "/openapi/multiplatform/shopee/global/page",
+       "to": "/api-530797727"
+      },
+      {
+       "name": "全球父商品下的全部子体。",
+       "type": "apiDetail",
+       "id": 530797728,
+       "method": "POST",
+       "path": "/openapi/multiplatform/shopee/global/children",
+       "to": "/api-530797728"
+      }
+     ]
+    },
+    {
+     "name": "订单",
+     "type": "apiDetailFolder",
+     "id": 77325437,
+     "children": [
+      {
+       "name": "多平台订单列表",
+       "type": "apiDetail",
+       "id": 352485971,
+       "method": "POST",
+       "path": "/api/multiplatform/order/list.json",
+       "to": "/api-352485971"
+      },
+      {
+       "name": "Temu 售后订单列表",
+       "type": "apiDetail",
+       "id": 510555320,
+       "method": "POST",
+       "path": "/api/multiplatform/after/sale/order/temu/list.json",
+       "to": "/api-510555320"
+      },
+      {
+       "name": "TikTok 售后订单列表",
+       "type": "apiDetail",
+       "id": 510555321,
+       "method": "POST",
+       "path": "/api/multiplatform/after/sale/order/tiktok/list.json",
+       "to": "/api-510555321"
+      },
+      {
+       "name": "Walmart 售后订单列表",
+       "type": "apiDetail",
+       "id": 510555322,
+       "method": "POST",
+       "path": "/api/multiplatform/after/sale/order/walmart/list.json",
+       "to": "/api-510555322"
+      },
+      {
+       "name": "Shopify 售后订单列表",
+       "type": "apiDetail",
+       "id": 510555319,
+       "method": "POST",
+       "path": "/api/multiplatform/after/sale/order/shopify/list.json",
+       "to": "/api-510555319"
+      },
+      {
+       "name": "查询多平台配对列表",
+       "type": "apiDetail",
+       "id": 422323117,
+       "method": "POST",
+       "path": "/api/multiplatform/match/getList.json",
+       "to": "/api-422323117"
+      },
+      {
+       "name": "批量添加/编辑多平台配对关系",
+       "type": "apiDetail",
+       "id": 422323118,
+       "method": "POST",
+       "path": "/api/multiplatform/match/save.json",
+       "to": "/api-422323118"
+      },
+      {
+       "name": "订单审核",
+       "type": "apiDetail",
+       "id": 422323123,
+       "method": "POST",
+       "path": "/api/packageShip/auditPackage.json",
+       "to": "/api-422323123"
+      },
+      {
+       "name": "批量创建手工订单",
+       "type": "apiDetail",
+       "id": 422323120,
+       "method": "POST",
+       "path": "/api/manual/order/createBatch.json",
+       "to": "/api-422323120"
+      },
+      {
+       "name": "物流下单发货",
+       "type": "apiDetail",
+       "id": 445014704,
+       "method": "POST",
+       "path": "/api/packageShip/applyTrackNo.json",
+       "to": "/api-445014704"
+      },
+      {
+       "name": "合并订单",
+       "type": "apiDetail",
+       "id": 422323124,
+       "method": "POST",
+       "path": "/api/packageShip/mergedPackage.json",
+       "to": "/api-422323124"
+      },
+      {
+       "name": "拆分订单",
+       "type": "apiDetail",
+       "id": 422323127,
+       "method": "POST",
+       "path": "/api/packageShip/splitPackage.json",
+       "to": "/api-422323127"
+      },
+      {
+       "name": "称重发货",
+       "type": "apiDetail",
+       "id": 422323129,
+       "method": "POST",
+       "path": "/api/packageShip/weighingShipment.json",
+       "to": "/api-422323129"
+      },
+      {
+       "name": "编辑订单",
+       "type": "apiDetail",
+       "id": 422323128,
+       "method": "POST",
+       "path": "/api/packageShip/updatePackageDetail.json",
+       "to": "/api-422323128"
+      },
+      {
+       "name": "更新订单客服备注/拣货备注",
+       "type": "apiDetail",
+       "id": 422323121,
+       "method": "POST",
+       "path": "/api/packageRemarks/saveRemarkOpen.json",
+       "to": "/api-422323121"
+      },
+      {
+       "name": "快速出库",
+       "type": "apiDetail",
+       "id": 422323126,
+       "method": "POST",
+       "path": "/api/packageShip/quickOutbound.json",
+       "to": "/api-422323126"
+      },
+      {
+       "name": "批量Temu地址解密",
+       "type": "apiDetail",
+       "id": 422323119,
+       "method": "POST",
+       "path": "/api/multiplatform/order/decryptAddress.json",
+       "to": "/api-422323119"
+      },
+      {
+       "name": "查询物流渠道列表",
+       "type": "apiDetail",
+       "id": 422323125,
+       "method": "POST",
+       "path": "/api/packageShip/queryShipChannel.json",
+       "to": "/api-422323125"
+      },
+      {
+       "name": "批量创建手工订单（新）",
+       "type": "apiDetail",
+       "id": 511078269,
+       "method": "POST",
+       "path": "/api/manual/order/v2/createBatch.json",
+       "to": "/api-511078269"
+      }
+     ]
+    },
+    {
+     "name": "广告",
+     "type": "apiDetailFolder",
+     "id": 96113323,
+     "children": [
+      {
+       "name": "Walmart-查询Walmart广告主列表",
+       "type": "apiDetail",
+       "id": 516639724,
+       "method": "POST",
+       "path": "/api/multiplatform/cpc/walmart/advertiser/page.json",
+       "to": "/api-516639724"
+      },
+      {
+       "name": "Walmart-查询SV广告产品报告",
+       "type": "apiDetail",
+       "id": 516639725,
+       "method": "POST",
+       "path": "/api/multiplatform/cpc/walmart/sv/adItem/report/page.json",
+       "to": "/api-516639725"
+      },
+      {
+       "name": "Walmart-查询SP关键词报告",
+       "type": "apiDetail",
+       "id": 516639726,
+       "method": "POST",
+       "path": "/api/multiplatform/cpc/walmart/sp/keyword/report/page.json",
+       "to": "/api-516639726"
+      },
+      {
+       "name": "Walmart-查询SB关键词报告",
+       "type": "apiDetail",
+       "id": 516639727,
+       "method": "POST",
+       "path": "/api/multiplatform/cpc/walmart/sb/keyword/report/page.json",
+       "to": "/api-516639727"
+      },
+      {
+       "name": "Walmart-查询SV关键词报告",
+       "type": "apiDetail",
+       "id": 516639728,
+       "method": "POST",
+       "path": "/api/multiplatform/cpc/walmart/sv/keyword/report/page.json",
+       "to": "/api-516639728"
+      },
+      {
+       "name": "Walmart-查询SP否定关键词列表",
+       "type": "apiDetail",
+       "id": 516639729,
+       "method": "POST",
+       "path": "/api/multiplatform/cpc/walmart/sp/neKeyword/page.json",
+       "to": "/api-516639729"
+      },
+      {
+       "name": "Walmart-查询Walmart热门搜索趋势",
+       "type": "apiDetail",
+       "id": 516639730,
+       "method": "POST",
+       "path": "/api/multiplatform/cpc/walmart/searchTrends/report/page.json",
+       "to": "/api-516639730"
+      },
+      {
+       "name": "Walmart-查询SP广告活动报告",
+       "type": "apiDetail",
+       "id": 516639731,
+       "method": "POST",
+       "path": "/api/multiplatform/cpc/walmart/sp/campaign/report/page.json",
+       "to": "/api-516639731"
+      },
+      {
+       "name": "Walmart-查询SB广告活动报告",
+       "type": "apiDetail",
+       "id": 516639732,
+       "method": "POST",
+       "path": "/api/multiplatform/cpc/walmart/sb/campaign/report/page.json",
+       "to": "/api-516639732"
+      },
+      {
+       "name": "Walmart-查询SV广告活动报告",
+       "type": "apiDetail",
+       "id": 516639733,
+       "method": "POST",
+       "path": "/api/multiplatform/cpc/walmart/sv/campaign/report/page.json",
+       "to": "/api-516639733"
+      },
+      {
+       "name": "Walmart-查询SP广告组报告",
+       "type": "apiDetail",
+       "id": 516639734,
+       "method": "POST",
+       "path": "/api/multiplatform/cpc/walmart/sp/group/report/page.json",
+       "to": "/api-516639734"
+      },
+      {
+       "name": "Walmart-查询SB广告组报告",
+       "type": "apiDetail",
+       "id": 516639735,
+       "method": "POST",
+       "path": "/api/multiplatform/cpc/walmart/sb/group/report/page.json",
+       "to": "/api-516639735"
+      },
+      {
+       "name": "Walmart-查询SV广告组报告",
+       "type": "apiDetail",
+       "id": 516639736,
+       "method": "POST",
+       "path": "/api/multiplatform/cpc/walmart/sv/group/report/page.json",
+       "to": "/api-516639736"
+      },
+      {
+       "name": "Walmart-查询SP广告产品报告",
+       "type": "apiDetail",
+       "id": 516639737,
+       "method": "POST",
+       "path": "/api/multiplatform/cpc/walmart/sp/adItem/report/page.json",
+       "to": "/api-516639737"
+      },
+      {
+       "name": "Walmart-查询SB广告产品报告",
+       "type": "apiDetail",
+       "id": 516639738,
+       "method": "POST",
+       "path": "/api/multiplatform/cpc/walmart/sb/adItem/report/page.json",
+       "to": "/api-516639738"
+      },
+      {
+       "name": "TikTok-查询TikTok-GMV MAX-广告账户",
+       "type": "apiDetail",
+       "id": 516640266,
+       "method": "POST",
+       "path": "/api/multiplatform/cpc/tiktok/advertiserList.json",
+       "to": "/api-516640266"
+      },
+      {
+       "name": "TikTok-查询TikTok-GMV MAX-推广系列",
+       "type": "apiDetail",
+       "id": 516640267,
+       "method": "POST",
+       "path": "/api/multiplatform/cpc/tiktok/campaignList.json",
+       "to": "/api-516640267"
+      },
+      {
+       "name": "TikTok-查询TikTok-GMV MAX-商品",
+       "type": "apiDetail",
+       "id": 516640268,
+       "method": "POST",
+       "path": "/api/multiplatform/cpc/tiktok/productPageList.json",
+       "to": "/api-516640268"
+      },
+      {
+       "name": "TikTok-查询TikTok-GMV MAX-素材",
+       "type": "apiDetail",
+       "id": 516640269,
+       "method": "POST",
+       "path": "/api/multiplatform/cpc/tiktok/creativePageList.json",
+       "to": "/api-516640269"
+      },
+      {
+       "name": "TikTok-查询TikTok-GMV MAX-广告日志",
+       "type": "apiDetail",
+       "id": 516640270,
+       "method": "POST",
+       "path": "/api/multiplatform/cpc/tiktok/logList.json",
+       "to": "/api-516640270"
+      },
+      {
+       "name": "TikTok-查询TikTok-GMV MAX-商店列表",
+       "type": "apiDetail",
+       "id": 516640271,
+       "method": "POST",
+       "path": "/api/multiplatform/cpc/tiktok/shopList.json",
+       "to": "/api-516640271"
+      },
+      {
+       "name": "Temu-Temu产品报告分页列表",
+       "type": "apiDetail",
+       "id": 516640339,
+       "method": "POST",
+       "path": "/api/multiplatform/cpc/temu/productReportPageList.json",
+       "to": "/api-516640339"
+      },
+      {
+       "name": "Temu-Temu店铺报告分页列表",
+       "type": "apiDetail",
+       "id": 516640340,
+       "method": "POST",
+       "path": "/api/multiplatform/cpc/temu/shopReportPageList.json",
+       "to": "/api-516640340"
+      },
+      {
+       "name": "Shopee-Shopee广告活动报告分页列表",
+       "type": "apiDetail",
+       "id": 516640512,
+       "method": "POST",
+       "path": "/api/multiplatform/cpc/shopee/campaignReportPageList.json",
+       "to": "/api-516640512"
+      },
+      {
+       "name": "MercadoLibre-美客多广告活动",
+       "type": "apiDetail",
+       "id": 516640527,
+       "method": "POST",
+       "path": "/api/multiplatform/cpc/mercado/campaignList.json",
+       "to": "/api-516640527"
+      },
+      {
+       "name": "MercadoLibre-美客多广告商品",
+       "type": "apiDetail",
+       "id": 516640528,
+       "method": "POST",
+       "path": "/api/multiplatform/cpc/mercado/productList.json",
+       "to": "/api-516640528"
+      }
+     ]
+    },
+    {
+     "name": "平台仓",
+     "type": "apiDetailFolder",
+     "id": 84292118,
+     "children": [
+      {
+       "name": "多平台发货单-分配库存",
+       "type": "apiDetail",
+       "id": 450305645,
+       "method": "POST",
+       "path": "/api/psi/common/shippingOrder/allocateStock.json",
+       "to": "/api-450305645"
+      },
+      {
+       "name": "多平台发货单-确认发货",
+       "type": "apiDetail",
+       "id": 450305646,
+       "method": "POST",
+       "path": "/api/psi/common/shippingOrder/confirmShip.json",
+       "to": "/api-450305646"
+      },
+      {
+       "name": "多平台发货单-获取多平台发货单列表",
+       "type": "apiDetail",
+       "id": 450305647,
+       "method": "POST",
+       "path": "/api/psi/common/shippingOrder/pageList.json",
+       "to": "/api-450305647"
+      },
+      {
+       "name": "多平台发货单-修改备注",
+       "type": "apiDetail",
+       "id": 450305648,
+       "method": "POST",
+       "path": "/api/psi/common/shippingOrder/updateRemark.json",
+       "to": "/api-450305648"
+      },
+      {
+       "name": "Temu-获取Temu货件列表",
+       "type": "apiDetail",
+       "id": 450307764,
+       "method": "POST",
+       "path": "/openapi/psi/temu/shipment/pageList.json",
+       "to": "/api-450307764"
+      },
+      {
+       "name": "Temu-获取Temu库存列表",
+       "type": "apiDetail",
+       "id": 450307763,
+       "method": "POST",
+       "path": "/openapi/psi/temu/inventory/pageList.json",
+       "to": "/api-450307763"
+      },
+      {
+       "name": "Mercado-Full库存列表",
+       "type": "apiDetail",
+       "id": 510029210,
+       "method": "POST",
+       "path": "/openapi/psi/mercado/fullInventory/pageList.json",
+       "to": "/api-510029210"
+      },
+      {
+       "name": "Walmart-获取WFS货件可添加商品列表",
+       "type": "apiDetail",
+       "id": 510029211,
+       "method": "POST",
+       "path": "/openapi/psi/walmart/wfsShipment/addableProductPageList.json",
+       "to": "/api-510029211"
+      },
+      {
+       "name": "Walmart-删除WFS货件",
+       "type": "apiDetail",
+       "id": 510029213,
+       "method": "POST",
+       "path": "/openapi/psi/walmart/wfsShipment/delete.json",
+       "to": "/api-510029213"
+      },
+      {
+       "name": "Walmart-获取WFS库存列表",
+       "type": "apiDetail",
+       "id": 510029215,
+       "method": "POST",
+       "path": "/openapi/psi/walmart/wfsStock/pageList.json",
+       "to": "/api-510029215"
+      },
+      {
+       "name": "Walmart-获取WFS货件列表",
+       "type": "apiDetail",
+       "id": 510029214,
+       "method": "POST",
+       "path": "/openapi/psi/walmart/wfsShipment/pageList.json",
+       "to": "/api-510029214"
+      },
+      {
+       "name": "Walmart-创建WFS货件草稿",
+       "type": "apiDetail",
+       "id": 510029212,
+       "method": "POST",
+       "path": "/openapi/psi/walmart/wfsShipment/createDraft.json",
+       "to": "/api-510029212"
+      }
+     ]
+    },
+    {
+     "name": "数据",
+     "type": "apiDetailFolder",
+     "id": 85702809,
+     "children": [
+      {
+       "name": "多平台销量统计（销量/销售额/订单量/GMV查询）",
+       "type": "apiDetail",
+       "id": 459161465,
+       "method": "POST",
+       "path": "/api/multiplatform/sale/stats/list.json",
+       "to": "/api-459161465"
+      },
+      {
+       "name": "Walmart产品分析-分页列表",
+       "type": "apiDetail",
+       "id": 530831087,
+       "method": "POST",
+       "path": "/api/multiplatform/analysis/walmart/pageList.json",
+       "to": "/api-530831087"
+      },
+      {
+       "name": "TikTok产品分析-列表",
+       "type": "apiDetail",
+       "id": 530831091,
+       "method": "POST",
+       "path": "/api/tiktok/productAnalysis/getPageList.json",
+       "to": "/api-530831091"
+      },
+      {
+       "name": "TikTok产品分析-直播-主播表现",
+       "type": "apiDetail",
+       "id": 530831088,
+       "method": "POST",
+       "path": "/api/tiktok/productAnalysis/getLiveAnchorPerformance.json",
+       "to": "/api-530831088"
+      },
+      {
+       "name": "TikTok产品分析-直播-直播列表",
+       "type": "apiDetail",
+       "id": 530831089,
+       "method": "POST",
+       "path": "/api/tiktok/productAnalysis/getLiveList.json",
+       "to": "/api-530831089"
+      },
+      {
+       "name": "TikTok产品分析-直播-指标总览",
+       "type": "apiDetail",
+       "id": 530831090,
+       "method": "POST",
+       "path": "/api/tiktok/productAnalysis/getLiveOverview.json",
+       "to": "/api-530831090"
+      },
+      {
+       "name": "TikTok产品分析-短视频-视频列表",
+       "type": "apiDetail",
+       "id": 530831093,
+       "method": "POST",
+       "path": "/api/tiktok/productAnalysis/getVideoList.json",
+       "to": "/api-530831093"
+      },
+      {
+       "name": "TikTok产品分析-短视频-指标总览",
+       "type": "apiDetail",
+       "id": 530831094,
+       "method": "POST",
+       "path": "/api/tiktok/productAnalysis/getVideoOverview.json",
+       "to": "/api-530831094"
+      },
+      {
+       "name": "TikTok产品分析-短视频-账号表现",
+       "type": "apiDetail",
+       "id": 530831092,
+       "method": "POST",
+       "path": "/api/tiktok/productAnalysis/getVideoAccountPerformance.json",
+       "to": "/api-530831092"
+      }
+     ]
+    },
+    {
+     "name": "财务",
+     "type": "apiDetailFolder",
+     "id": 79162888,
+     "children": [
+      {
+       "name": "多平台利润报表-多渠道订单管理",
+       "type": "apiDetail",
+       "id": 365907899,
+       "method": "POST",
+       "path": "/api/financial/aggReport/getFinancialPage.json",
+       "to": "/api-365907899"
+      },
+      {
+       "name": "多平台利润报表-查询MSKU",
+       "type": "apiDetail",
+       "id": 365907900,
+       "method": "POST",
+       "path": "/api/financial/aggReport/queryPageMsku.json",
+       "to": "/api-365907900"
+      },
+      {
+       "name": "多平台利润报表-查询店铺",
+       "type": "apiDetail",
+       "id": 365907901,
+       "method": "POST",
+       "path": "/api/financial/aggReport/queryPageShop.json",
+       "to": "/api-365907901"
+      },
+      {
+       "name": "多平台利润报表-查询SKU",
+       "type": "apiDetail",
+       "id": 365907902,
+       "method": "POST",
+       "path": "/api/financial/aggReport/queryPageSku.json",
+       "to": "/api-365907902"
+      },
+      {
+       "name": "多平台利润报表-查询结算明细-AliExpress",
+       "type": "apiDetail",
+       "id": 426459614,
+       "method": "POST",
+       "path": "/api/financial/aggReport/settlement/aliExpressPage.json",
+       "to": "/api-426459614"
+      },
+      {
+       "name": "多平台利润报表-查询结算明细-eBay",
+       "type": "apiDetail",
+       "id": 426459615,
+       "method": "POST",
+       "path": "/api/financial/aggReport/settlement/eBayPage.json",
+       "to": "/api-426459615"
+      },
+      {
+       "name": "多平台利润报表-查询结算明细-MercadoLibre",
+       "type": "apiDetail",
+       "id": 426459616,
+       "method": "POST",
+       "path": "/api/financial/aggReport/settlement/mercadoLibrePage.json",
+       "to": "/api-426459616"
+      },
+      {
+       "name": "多平台利润报表-查询结算明细-SHEIN全托管-明细",
+       "type": "apiDetail",
+       "id": 426459617,
+       "method": "POST",
+       "path": "/api/financial/aggReport/settlement/sheinAgent/detailPage.json",
+       "to": "/api-426459617"
+      },
+      {
+       "name": "多平台利润报表-查询结算明细-SHEIN全托管-汇总",
+       "type": "apiDetail",
+       "id": 426459618,
+       "method": "POST",
+       "path": "/api/financial/aggReport/settlement/sheinAgent/summaryPage.json",
+       "to": "/api-426459618"
+      },
+      {
+       "name": "多平台利润报表-查询结算明细-SHEIN自运营/半托管",
+       "type": "apiDetail",
+       "id": 426459619,
+       "method": "POST",
+       "path": "/api/financial/aggReport/settlement/sheinHalfPage.json",
+       "to": "/api-426459619"
+      },
+      {
+       "name": "多平台利润报表-查询结算明细-Shopify",
+       "type": "apiDetail",
+       "id": 426459620,
+       "method": "POST",
+       "path": "/api/financial/aggReport/settlement/shopifyPage.json",
+       "to": "/api-426459620"
+      },
+      {
+       "name": "多平台利润报表-查询结算明细-Ozon",
+       "type": "apiDetail",
+       "id": 530792240,
+       "method": "POST",
+       "path": "/api/financial/aggSettlement/ozon/page.json",
+       "to": "/api-530792240"
+      },
+      {
+       "name": "多平台利润报表-查询结算明细-Shopee",
+       "type": "apiDetail",
+       "id": 530792241,
+       "method": "POST",
+       "path": "/api/financial/aggSettlement/shopee/page.json",
+       "to": "/api-530792241"
+      },
+      {
+       "name": "多平台利润报表-查询回款明细-eBay",
+       "type": "apiDetail",
+       "id": 530792727,
+       "method": "POST",
+       "path": "/api/financial/aggPayout/payout/eBayPage.json",
+       "to": "/api-530792727"
+      },
+      {
+       "name": "多平台利润报表-查询回款明细-SHEIN",
+       "type": "apiDetail",
+       "id": 530792728,
+       "method": "POST",
+       "path": "/api/financial/aggPayout/payout/sheinPage.json",
+       "to": "/api-530792728"
+      },
+      {
+       "name": "多平台利润报表-查询回款明细-Walmart",
+       "type": "apiDetail",
+       "id": 530792729,
+       "method": "POST",
+       "path": "/api/financial/aggPayout/payout/walmartPage.json",
+       "to": "/api-530792729"
+      },
+      {
+       "name": "Temu全托利润报表-查询开发员",
+       "type": "apiDetail",
+       "id": 365907903,
+       "method": "POST",
+       "path": "/api/financial/cross/temuAllReport/queryPageDeveloper.json",
+       "to": "/api-365907903"
+      },
+      {
+       "name": "Temu全托利润报表-查询产品ID",
+       "type": "apiDetail",
+       "id": 365907904,
+       "method": "POST",
+       "path": "/api/financial/cross/temuAllReport/queryPageProduct.json",
+       "to": "/api-365907904"
+      },
+      {
+       "name": "Temu全托利润报表-查询业务员",
+       "type": "apiDetail",
+       "id": 365907905,
+       "method": "POST",
+       "path": "/api/financial/cross/temuAllReport/queryPageSalesMan.json",
+       "to": "/api-365907905"
+      },
+      {
+       "name": "Temu全托利润报表-查询店铺",
+       "type": "apiDetail",
+       "id": 365907906,
+       "method": "POST",
+       "path": "/api/financial/cross/temuAllReport/queryPageShop.json",
+       "to": "/api-365907906"
+      },
+      {
+       "name": "Temu全托利润报表-查询SKU",
+       "type": "apiDetail",
+       "id": 365907907,
+       "method": "POST",
+       "path": "/api/financial/cross/temuAllReport/queryPageSku.json",
+       "to": "/api-365907907"
+      },
+      {
+       "name": "Temu全托利润报表-查询结算总览",
+       "type": "apiDetail",
+       "id": 426460072,
+       "method": "POST",
+       "path": "/api/financial/cross/temuAllReport/queryTransactionOverview.json",
+       "to": "/api-426460072"
+      },
+      {
+       "name": "Temu全托利润报表-查询结算明细-交易收入",
+       "type": "apiDetail",
+       "id": 426460071,
+       "method": "POST",
+       "path": "/api/financial/cross/temuAllReport/queryTransactionIncome.json",
+       "to": "/api-426460071"
+      },
+      {
+       "name": "Temu全托利润报表-查询结算明细-交易结算",
+       "type": "apiDetail",
+       "id": 426460073,
+       "method": "POST",
+       "path": "/api/financial/cross/temuAllReport/queryTransactionSettlement.json",
+       "to": "/api-426460073"
+      },
+      {
+       "name": "Temu全托利润报表-查询结算明细-广告服务费",
+       "type": "apiDetail",
+       "id": 426460055,
+       "method": "POST",
+       "path": "/api/financial/cross/temuAllReport/queryAdvertisingServiceFee.json",
+       "to": "/api-426460055"
+      },
+      {
+       "name": "Temu全托利润报表-查询结算明细-售后赔付扣款",
+       "type": "apiDetail",
+       "id": 426460056,
+       "method": "POST",
+       "path": "/api/financial/cross/temuAllReport/queryAfterSales.json",
+       "to": "/api-426460056"
+      },
+      {
+       "name": "Temu全托利润报表-查询结算明细-售后补寄",
+       "type": "apiDetail",
+       "id": 426460057,
+       "method": "POST",
+       "path": "/api/financial/cross/temuAllReport/queryAfterSalesResend.json",
+       "to": "/api-426460057"
+      },
+      {
+       "name": "Temu全托利润报表-查询结算明细-揽收服务费",
+       "type": "apiDetail",
+       "id": 426460058,
+       "method": "POST",
+       "path": "/api/financial/cross/temuAllReport/queryCollectionServiceFee.json",
+       "to": "/api-426460058"
+      },
+      {
+       "name": "Temu全托利润报表-查询结算明细-非商责平台售后补贴调整",
+       "type": "apiDetail",
+       "id": 426460059,
+       "method": "POST",
+       "path": "/api/financial/cross/temuAllReport/queryCommercialAfterSalesFee.json",
+       "to": "/api-426460059"
+      },
+      {
+       "name": "Temu全托利润报表-查询结算明细-EPR费用-已扣费",
+       "type": "apiDetail",
+       "id": 426460060,
+       "method": "POST",
+       "path": "/api/financial/cross/temuAllReport/queryEprDeduct.json",
+       "to": "/api-426460060"
+      },
+      {
+       "name": "Temu全托利润报表-查询结算明细-EPR费用-已退费",
+       "type": "apiDetail",
+       "id": 426460061,
+       "method": "POST",
+       "path": "/api/financial/cross/temuAllReport/queryEprRefund.json",
+       "to": "/api-426460061"
+      },
+      {
+       "name": "Temu全托利润报表-查询结算明细-商品品质保障-质量问题（JIT商品）",
+       "type": "apiDetail",
+       "id": 426460062,
+       "method": "POST",
+       "path": "/api/financial/cross/temuAllReport/queryProductQualityPenalty.json",
+       "to": "/api-426460062"
+      },
+      {
+       "name": "Temu全托利润报表-查询结算明细-质量事故违规扣款",
+       "type": "apiDetail",
+       "id": 426460063,
+       "method": "POST",
+       "path": "/api/financial/cross/temuAllReport/queryQualityAccident.json",
+       "to": "/api-426460063"
+      },
+      {
+       "name": "Temu全托利润报表-查询结算明细-退回服务费",
+       "type": "apiDetail",
+       "id": 426460064,
+       "method": "POST",
+       "path": "/api/financial/cross/temuAllReport/queryReturnServiceFee.json",
+       "to": "/api-426460064"
+      },
+      {
+       "name": "Temu全托利润报表-查询结算明细-退货分拣打包费",
+       "type": "apiDetail",
+       "id": 426460065,
+       "method": "POST",
+       "path": "/api/financial/cross/temuAllReport/queryReturnSortFee.json",
+       "to": "/api-426460065"
+      },
+      {
+       "name": "Temu全托利润报表-查询结算明细-非商责平台售后补贴",
+       "type": "apiDetail",
+       "id": 426460066,
+       "method": "POST",
+       "path": "/api/financial/cross/temuAllReport/querySalesRelease.json",
+       "to": "/api-426460066"
+      },
+      {
+       "name": "Temu全托利润报表-查询结算明细-消费者退款",
+       "type": "apiDetail",
+       "id": 426460067,
+       "method": "POST",
+       "path": "/api/financial/cross/temuAllReport/querySalesReservation.json",
+       "to": "/api-426460067"
+      },
+      {
+       "name": "Temu全托利润报表-查询结算明细-店铺其他账务",
+       "type": "apiDetail",
+       "id": 426460068,
+       "method": "POST",
+       "path": "/api/financial/cross/temuAllReport/queryShopOtherAccount.json",
+       "to": "/api-426460068"
+      },
+      {
+       "name": "Temu全托利润报表-查询结算明细-备货违规扣款",
+       "type": "apiDetail",
+       "id": 426460069,
+       "method": "POST",
+       "path": "/api/financial/cross/temuAllReport/queryStockingViolation.json",
+       "to": "/api-426460069"
+      },
+      {
+       "name": "Temu全托利润报表-查询结算明细-第三方揽收入库贴标服务费",
+       "type": "apiDetail",
+       "id": 426460070,
+       "method": "POST",
+       "path": "/api/financial/cross/temuAllReport/queryThirdServiceFee.json",
+       "to": "/api-426460070"
+      },
+      {
+       "name": "Temu全托利润报表-查询结算明细-仓储增值服务-贴标费",
+       "type": "apiDetail",
+       "id": 426460074,
+       "method": "POST",
+       "path": "/api/financial/cross/temuAllReport/queryWarehouseAddedServiceFee.json",
+       "to": "/api-426460074"
+      },
+      {
+       "name": "Temu全托利润报表-查询结算明细-分仓揽收调拨费用",
+       "type": "apiDetail",
+       "id": 426460075,
+       "method": "POST",
+       "path": "/api/financial/cross/temuAllReport/queryWarehouseTransferFee.json",
+       "to": "/api-426460075"
+      },
+      {
+       "name": "Temu半托利润报表-查询开发员",
+       "type": "apiDetail",
+       "id": 365907908,
+       "method": "POST",
+       "path": "/api/financial/cross/temuPartReport/queryPageDeveloper.json",
+       "to": "/api-365907908"
+      },
+      {
+       "name": "Temu半托利润报表-查询产品ID",
+       "type": "apiDetail",
+       "id": 365907909,
+       "method": "POST",
+       "path": "/api/financial/cross/temuPartReport/queryPageProduct.json",
+       "to": "/api-365907909"
+      },
+      {
+       "name": "Temu半托利润报表-查询业务员",
+       "type": "apiDetail",
+       "id": 365907910,
+       "method": "POST",
+       "path": "/api/financial/cross/temuPartReport/queryPageSalesMan.json",
+       "to": "/api-365907910"
+      },
+      {
+       "name": "Temu半托利润报表-查询店铺",
+       "type": "apiDetail",
+       "id": 365907911,
+       "method": "POST",
+       "path": "/api/financial/cross/temuPartReport/queryPageShop.json",
+       "to": "/api-365907911"
+      },
+      {
+       "name": "Temu半托利润报表-查询SKU",
+       "type": "apiDetail",
+       "id": 365907912,
+       "method": "POST",
+       "path": "/api/financial/cross/temuPartReport/queryPageSku.json",
+       "to": "/api-365907912"
+      },
+      {
+       "name": "Temu半托利润报表-查询订单",
+       "type": "apiDetail",
+       "id": 529465091,
+       "method": "POST",
+       "path": "/api/financial/cross/temuPartReport/queryPageOrder.json",
+       "to": "/api-529465091"
+      },
+      {
+       "name": "Temu半托利润报表-查询结算总览",
+       "type": "apiDetail",
+       "id": 426460689,
+       "method": "POST",
+       "path": "/api/financial/cross/temuPartReport/querySettlementSummary.json",
+       "to": "/api-426460689"
+      },
+      {
+       "name": "Temu半托利润报表-查询结算明细-交易收入",
+       "type": "apiDetail",
+       "id": 426460694,
+       "method": "POST",
+       "path": "/api/financial/cross/temuPartReport/queryTransactionIncome.json",
+       "to": "/api-426460694"
+      },
+      {
+       "name": "Temu半托利润报表-查询结算明细-结算",
+       "type": "apiDetail",
+       "id": 426460688,
+       "method": "POST",
+       "path": "/api/financial/cross/temuPartReport/querySettlementDetail.json",
+       "to": "/api-426460688"
+      },
+      {
+       "name": "Temu半托利润报表-查询结算明细-广告服务费",
+       "type": "apiDetail",
+       "id": 426460677,
+       "method": "POST",
+       "path": "/api/financial/cross/temuPartReport/queryAdvertisingServiceFee.json",
+       "to": "/api-426460677"
+      },
+      {
+       "name": "Temu半托利润报表-查询结算明细-买家拒付",
+       "type": "apiDetail",
+       "id": 426460678,
+       "method": "POST",
+       "path": "/api/financial/cross/temuPartReport/queryBuyerRefuses.json",
+       "to": "/api-426460678"
+      },
+      {
+       "name": "Temu半托利润报表-查询结算明细-消费者和解",
+       "type": "apiDetail",
+       "id": 426460679,
+       "method": "POST",
+       "path": "/api/financial/cross/temuPartReport/queryConsumerSettlement.json",
+       "to": "/api-426460679"
+      },
+      {
+       "name": "Temu半托利润报表-查询结算明细-处置费",
+       "type": "apiDetail",
+       "id": 426460680,
+       "method": "POST",
+       "path": "/api/financial/cross/temuPartReport/queryDisposal.json",
+       "to": "/api-426460680"
+      },
+      {
+       "name": "Temu半托利润报表-查询结算明细-EPR费用-已扣费",
+       "type": "apiDetail",
+       "id": 426460681,
+       "method": "POST",
+       "path": "/api/financial/cross/temuPartReport/queryEprDeduct.json",
+       "to": "/api-426460681"
+      },
+      {
+       "name": "Temu半托利润报表-查询结算明细-EPR费用-已退费",
+       "type": "apiDetail",
+       "id": 426460682,
+       "method": "POST",
+       "path": "/api/financial/cross/temuPartReport/queryEprRefund.json",
+       "to": "/api-426460682"
+      },
+      {
+       "name": "Temu半托利润报表-查询结算明细-欺诈发货",
+       "type": "apiDetail",
+       "id": 426460683,
+       "method": "POST",
+       "path": "/api/financial/cross/temuPartReport/queryFraudulentShipment.json",
+       "to": "/api-426460683"
+      },
+      {
+       "name": "Temu半托利润报表-查询结算明细-运费收入",
+       "type": "apiDetail",
+       "id": 426460684,
+       "method": "POST",
+       "path": "/api/financial/cross/temuPartReport/queryFreightIncome.json",
+       "to": "/api-426460684"
+      },
+      {
+       "name": "Temu半托利润报表-查询结算明细-运费退款",
+       "type": "apiDetail",
+       "id": 426460685,
+       "method": "POST",
+       "path": "/api/financial/cross/temuPartReport/queryFreightRefund.json",
+       "to": "/api-426460685"
+      },
+      {
+       "name": "Temu半托利润报表-查询结算明细-退货面单费",
+       "type": "apiDetail",
+       "id": 426460686,
+       "method": "POST",
+       "path": "/api/financial/cross/temuPartReport/queryReturnInvoice.json",
+       "to": "/api-426460686"
+      },
+      {
+       "name": "Temu半托利润报表-查询结算明细-售后退款",
+       "type": "apiDetail",
+       "id": 426460687,
+       "method": "POST",
+       "path": "/api/financial/cross/temuPartReport/querySaleRefund.json",
+       "to": "/api-426460687"
+      },
+      {
+       "name": "Temu半托利润报表-查询结算明细-发货面单费",
+       "type": "apiDetail",
+       "id": 426460690,
+       "method": "POST",
+       "path": "/api/financial/cross/temuPartReport/queryShippingInvoice.json",
+       "to": "/api-426460690"
+      },
+      {
+       "name": "Temu半托利润报表-查询结算明细-店铺其他账务",
+       "type": "apiDetail",
+       "id": 426460691,
+       "method": "POST",
+       "path": "/api/financial/cross/temuPartReport/queryShopOtherAccount.json",
+       "to": "/api-426460691"
+      },
+      {
+       "name": "Temu半托利润报表-查询结算明细-税金退回",
+       "type": "apiDetail",
+       "id": 426460692,
+       "method": "POST",
+       "path": "/api/financial/cross/temuPartReport/queryTaxesReturn.json",
+       "to": "/api-426460692"
+      },
+      {
+       "name": "Temu半托利润报表-查询结算明细-税金代扣",
+       "type": "apiDetail",
+       "id": 426460693,
+       "method": "POST",
+       "path": "/api/financial/cross/temuPartReport/queryTaxesWithhold.json",
+       "to": "/api-426460693"
+      },
+      {
+       "name": "Temu半托利润报表-查询结算明细-履约违规",
+       "type": "apiDetail",
+       "id": 426460695,
+       "method": "POST",
+       "path": "/api/financial/cross/temuPartReport/queryViolationDeduct.json",
+       "to": "/api-426460695"
+      },
+      {
+       "name": "TikTok利润报表-查询开发员",
+       "type": "apiDetail",
+       "id": 365907913,
+       "method": "POST",
+       "path": "/api/financial/tkReport/queryPageDeveloper.json",
+       "to": "/api-365907913"
+      },
+      {
+       "name": "TikTok利润报表-查询MSKU",
+       "type": "apiDetail",
+       "id": 365907914,
+       "method": "POST",
+       "path": "/api/financial/tkReport/queryPageMsku.json",
+       "to": "/api-365907914"
+      },
+      {
+       "name": "TikTok利润报表-查询店铺",
+       "type": "apiDetail",
+       "id": 365907915,
+       "method": "POST",
+       "path": "/api/financial/tkReport/queryPageShop.json",
+       "to": "/api-365907915"
+      },
+      {
+       "name": "TikTok利润报表-查询SKU",
+       "type": "apiDetail",
+       "id": 365907916,
+       "method": "POST",
+       "path": "/api/financial/tkReport/queryPageSku.json",
+       "to": "/api-365907916"
+      },
+      {
+       "name": "TikTok利润报表-查询业务员",
+       "type": "apiDetail",
+       "id": 365907917,
+       "method": "POST",
+       "path": "/api/financial/tkReport/querySalesMan.json",
+       "to": "/api-365907917"
+      },
+      {
+       "name": "TikTok利润报表-查询账单明细",
+       "type": "apiDetail",
+       "id": 426461067,
+       "method": "POST",
+       "path": "/api/financial/tkReport/queryStatementDetail.json",
+       "to": "/api-426461067"
+      },
+      {
+       "name": "TikTok利润报表-查询账单明细-产品",
+       "type": "apiDetail",
+       "id": 529465094,
+       "method": "POST",
+       "path": "/api/financial/tkReport/querySkuStatementDetail.json",
+       "to": "/api-529465094"
+      },
+      {
+       "name": "TikTok结算中心-查询店铺余额",
+       "type": "apiDetail",
+       "id": 529465093,
+       "method": "POST",
+       "path": "/api/financial/tkReport/queryShopBalance.json",
+       "to": "/api-529465093"
+      },
+      {
+       "name": "TikTok回款明细-查询回款",
+       "type": "apiDetail",
+       "id": 529465092,
+       "method": "POST",
+       "path": "/api/financial/tkReport/queryPayout.json",
+       "to": "/api-529465092"
+      },
+      {
+       "name": "Walmart利润报表-查询开发员",
+       "type": "apiDetail",
+       "id": 365907918,
+       "method": "POST",
+       "path": "/api/financial/walmartReport/queryPageDeveloper.json",
+       "to": "/api-365907918"
+      },
+      {
+       "name": "Walmart利润报表-查询MSKU",
+       "type": "apiDetail",
+       "id": 365907919,
+       "method": "POST",
+       "path": "/api/financial/walmartReport/queryPageMsku.json",
+       "to": "/api-365907919"
+      },
+      {
+       "name": "Walmart利润报表-查询业务员",
+       "type": "apiDetail",
+       "id": 365907920,
+       "method": "POST",
+       "path": "/api/financial/walmartReport/queryPageSalesMan.json",
+       "to": "/api-365907920"
+      },
+      {
+       "name": "Walmart利润报表-查询店铺",
+       "type": "apiDetail",
+       "id": 365907921,
+       "method": "POST",
+       "path": "/api/financial/walmartReport/queryPageShop.json",
+       "to": "/api-365907921"
+      },
+      {
+       "name": "Walmart利润报表-查询SKU",
+       "type": "apiDetail",
+       "id": 365907922,
+       "method": "POST",
+       "path": "/api/financial/walmartReport/queryPageSku.json",
+       "to": "/api-365907922"
+      },
+      {
+       "name": "Walmart利润报表-查询结算明细",
+       "type": "apiDetail",
+       "id": 426460712,
+       "method": "POST",
+       "path": "/api/financial/walmartReport/queryStatementDetail.json",
+       "to": "/api-426460712"
+      }
+     ]
+    },
+    {
+     "name": "设置",
+     "type": "apiDetailFolder",
+     "id": 77325425,
+     "children": [
+      {
+       "name": "多平台店铺列表",
+       "type": "apiDetail",
+       "id": 372129191,
+       "method": "POST",
+       "path": "/api/multiplatform/shop/list.json",
+       "to": "/api-372129191"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

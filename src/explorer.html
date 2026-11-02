@@ -1,0 +1,945 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SellFox API Explorer</title>
+<style>
+:root {
+  --bg: #0f1115;
+  --bg-soft: #161a21;
+  --bg-panel: #1b202a;
+  --bg-hover: #232a36;
+  --border: #2a3140;
+  --text: #e6ebf2;
+  --text-dim: #97a3b6;
+  --text-faint: #64707f;
+  --accent: #4f8cff;
+  --accent-soft: rgba(79,140,255,.14);
+  --green: #2ecc71;
+  --amber: #f0a92c;
+  --red: #ef4b58;
+  --purple: #a678f0;
+  --mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+}
+html[data-theme="light"] {
+  --bg: #f6f8fb;
+  --bg-soft: #ffffff;
+  --bg-panel: #ffffff;
+  --bg-hover: #eef2f8;
+  --border: #dde4ee;
+  --text: #1c2430;
+  --text-dim: #5a6675;
+  --text-faint: #8b97a7;
+  --accent: #2f6fe4;
+  --accent-soft: rgba(47,111,228,.10);
+  --green: #1f9d55;
+  --amber: #b8760c;
+  --red: #d33a47;
+  --purple: #7b4fd0;
+}
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font: 14px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC",
+        "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* ---------- header ---------- */
+header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 0 18px;
+  height: 54px;
+  flex: 0 0 auto;
+  background: var(--bg-soft);
+  border-bottom: 1px solid var(--border);
+  z-index: 20;
+}
+.brand { display: flex; align-items: center; gap: 9px; font-weight: 650; letter-spacing: .2px; }
+.brand-dot {
+  width: 9px; height: 9px; border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 0 4px var(--accent-soft);
+}
+.brand small { color: var(--text-faint); font-weight: 400; font-size: 12px; }
+.stats { display: flex; gap: 14px; font-size: 12px; color: var(--text-dim); }
+.stats b { color: var(--text); font-variant-numeric: tabular-nums; }
+.spacer { flex: 1; }
+.search-wrap { position: relative; }
+#search {
+  width: 300px;
+  padding: 7px 30px 7px 32px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: var(--bg);
+  color: var(--text);
+  font-size: 13px;
+  outline: none;
+  transition: border-color .15s, box-shadow .15s;
+}
+#search:focus { border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-soft); }
+.search-icon {
+  position: absolute; left: 10px; top: 50%; transform: translateY(-50%);
+  color: var(--text-faint); pointer-events: none; font-size: 13px;
+}
+.search-kbd {
+  position: absolute; right: 8px; top: 50%; transform: translateY(-50%);
+  font: 11px var(--mono); color: var(--text-faint);
+  border: 1px solid var(--border); border-radius: 4px; padding: 1px 4px;
+  pointer-events: none;
+}
+.icon-btn {
+  width: 32px; height: 32px;
+  display: inline-flex; align-items: center; justify-content: center;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--text-dim);
+  cursor: pointer;
+  font-size: 14px;
+  transition: background .15s, color .15s, border-color .15s;
+}
+.icon-btn:hover { background: var(--bg-hover); color: var(--text); border-color: var(--accent); }
+.icon-btn[aria-pressed="true"] { background: var(--accent-soft); color: var(--accent); border-color: var(--accent); }
+
+/* ---------- layout ---------- */
+main { display: flex; flex: 1; min-height: 0; }
+#sidebar {
+  width: 380px;
+  flex: 0 0 auto;
+  background: var(--bg-soft);
+  border-right: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+.sidebar-tools {
+  display: flex; gap: 6px; padding: 9px 10px;
+  border-bottom: 1px solid var(--border);
+  flex: 0 0 auto;
+}
+.mini-btn {
+  flex: 1;
+  padding: 5px 8px;
+  font-size: 12px;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--text-dim);
+  cursor: pointer;
+  transition: background .15s, color .15s;
+}
+.mini-btn:hover { background: var(--bg-hover); color: var(--text); }
+#tree {
+  flex: 1;
+  overflow-y: auto;
+  padding: 6px 0 40px;
+  scrollbar-width: thin;
+}
+#tree::-webkit-scrollbar { width: 9px; }
+#tree::-webkit-scrollbar-thumb { background: var(--border); border-radius: 5px; }
+#tree::-webkit-scrollbar-thumb:hover { background: var(--text-faint); }
+
+.node { user-select: none; }
+.row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px 4px 8px;
+  cursor: pointer;
+  border-left: 2px solid transparent;
+  font-size: 13px;
+  line-height: 1.4;
+}
+.row:hover { background: var(--bg-hover); }
+.row.active { background: var(--accent-soft); border-left-color: var(--accent); }
+.row.hidden-by-filter { display: none; }
+.caret {
+  width: 14px; flex: 0 0 14px;
+  text-align: center;
+  color: var(--text-faint);
+  font-size: 9px;
+  transition: transform .12s ease;
+  display: inline-block;
+}
+.caret.open { transform: rotate(90deg); }
+.caret.leaf { visibility: hidden; }
+.row-label {
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.folder-label { font-weight: 550; }
+.method {
+  flex: 0 0 auto;
+  font: 600 9.5px/1.6 var(--mono);
+  letter-spacing: .4px;
+  padding: 0 4px;
+  border-radius: 3px;
+  text-transform: uppercase;
+}
+.m-POST { color: #6ea8ff; background: rgba(110,168,255,.14); }
+.m-GET { color: #3ddc84; background: rgba(61,220,132,.14); }
+.m-PUT { color: #f0a92c; background: rgba(240,169,44,.14); }
+.m-DELETE { color: #ef4b58; background: rgba(239,75,88,.14); }
+.m-PATCH { color: #a678f0; background: rgba(166,120,240,.14); }
+.m-OTHER { color: var(--text-dim); background: rgba(151,163,182,.14); }
+.count-badge {
+  flex: 0 0 auto;
+  font: 10px var(--mono);
+  color: var(--text-faint);
+  background: var(--bg);
+  border-radius: 9px;
+  padding: 1px 6px;
+  min-width: 20px;
+  text-align: center;
+}
+.children { overflow: hidden; }
+.children.collapsed { display: none; }
+
+mark { background: rgba(240,169,44,.32); color: inherit; border-radius: 2px; padding: 0 1px; }
+
+/* ---------- detail ---------- */
+#detail {
+  flex: 1;
+  min-width: 0;
+  overflow-y: auto;
+  padding: 26px 32px 80px;
+  scrollbar-width: thin;
+}
+#detail::-webkit-scrollbar { width: 10px; }
+#detail::-webkit-scrollbar-thumb { background: var(--border); border-radius: 5px; }
+
+.empty-state {
+  height: 100%;
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  color: var(--text-faint);
+  text-align: center;
+  gap: 10px;
+}
+.empty-state .big { font-size: 34px; opacity: .5; }
+.empty-state h2 { margin: 0; font-size: 17px; font-weight: 550; color: var(--text-dim); }
+.empty-state p { margin: 0; font-size: 13px; max-width: 420px; line-height: 1.7; }
+.kbd-hint {
+  display: inline-flex; gap: 5px; align-items: center;
+  margin-top: 6px; font-size: 12px; color: var(--text-faint);
+}
+.crumbs {
+  display: flex; flex-wrap: wrap; align-items: center; gap: 6px;
+  font-size: 12px; color: var(--text-faint); margin-bottom: 10px;
+}
+.crumbs .sep { opacity: .5; }
+.title-row { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 6px; }
+h1 { margin: 0; font-size: 21px; font-weight: 640; line-height: 1.35; }
+.endpoint-bar {
+  display: flex; align-items: center; gap: 10px;
+  margin: 14px 0 20px;
+  padding: 9px 12px;
+  background: var(--bg-soft);
+  border: 1px solid var(--border);
+  border-radius: 9px;
+  font-family: var(--mono);
+  font-size: 13px;
+  overflow-x: auto;
+}
+.endpoint-bar .method { font-size: 11px; padding: 2px 7px; }
+.endpoint-bar code { white-space: nowrap; }
+.endpoint-bar .copy-btn {
+  margin-left: auto;
+  flex: 0 0 auto;
+  font: 12px -apple-system, sans-serif;
+  padding: 4px 10px;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--text-dim);
+  cursor: pointer;
+}
+.endpoint-bar .copy-btn:hover { color: var(--text); border-color: var(--accent); }
+
+.section { margin-bottom: 26px; }
+.section > h3 {
+  margin: 0 0 10px;
+  font-size: 12px;
+  font-weight: 650;
+  letter-spacing: .7px;
+  text-transform: uppercase;
+  color: var(--text-faint);
+}
+.card {
+  background: var(--bg-soft);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 16px 18px;
+}
+dl.meta { margin: 0; display: grid; grid-template-columns: 132px 1fr; gap: 8px 16px; font-size: 13px; }
+dl.meta dt { color: var(--text-dim); }
+dl.meta dd { margin: 0; font-family: var(--mono); font-size: 12.5px; word-break: break-all; }
+
+table.params { width: 100%; border-collapse: collapse; font-size: 13px; }
+table.params th {
+  text-align: left;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: .5px;
+  color: var(--text-faint);
+  font-weight: 600;
+  padding: 6px 10px;
+  border-bottom: 1px solid var(--border);
+  white-space: nowrap;
+}
+table.params td { padding: 7px 10px; border-bottom: 1px solid var(--border); vertical-align: top; }
+table.params tr:last-child td { border-bottom: none; }
+table.params td.req { color: var(--red); font-size: 11px; font-weight: 600; }
+table.params code { font-family: var(--mono); font-size: 12px; }
+
+pre.code {
+  margin: 0;
+  padding: 14px 16px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  overflow-x: auto;
+  font: 12.5px/1.65 var(--mono);
+  color: var(--text);
+}
+pre.code .k { color: #6ea8ff; }
+pre.code .s { color: #3ddc84; }
+pre.code .n { color: #f0a92c; }
+pre.code .b { color: #a678f0; }
+.try-bar { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+.btn {
+  padding: 7px 16px;
+  border-radius: 7px;
+  border: 1px solid var(--accent);
+  background: var(--accent);
+  color: #fff;
+  font-size: 13px;
+  font-weight: 550;
+  cursor: pointer;
+  transition: filter .15s;
+}
+.btn:hover { filter: brightness(1.1); }
+.btn:disabled { opacity: .5; cursor: not-allowed; }
+.btn.secondary { background: transparent; border-color: var(--border); color: var(--text-dim); font-weight: 400; }
+.btn.secondary:hover { border-color: var(--accent); color: var(--text); }
+.note {
+  font-size: 12.5px;
+  color: var(--text-dim);
+  background: var(--bg-soft);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--amber);
+  border-radius: 7px;
+  padding: 10px 13px;
+  line-height: 1.65;
+}
+.note code { font-family: var(--mono); font-size: 12px; color: var(--text); }
+.tag {
+  display: inline-block;
+  font: 11px var(--mono);
+  padding: 1px 7px;
+  border-radius: 4px;
+  background: var(--bg-hover);
+  color: var(--text-dim);
+  margin: 0 4px 4px 0;
+}
+
+/* ---------- toast ---------- */
+#toast {
+  position: fixed;
+  bottom: 24px; left: 50%;
+  transform: translateX(-50%) translateY(14px);
+  background: var(--bg-panel);
+  border: 1px solid var(--border);
+  color: var(--text);
+  padding: 9px 18px;
+  border-radius: 8px;
+  font-size: 13px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .18s, transform .18s;
+  z-index: 100;
+  box-shadow: 0 8px 26px rgba(0,0,0,.4);
+}
+#toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+
+/* ---------- responsive ---------- */
+@media (max-width: 900px) {
+  #sidebar { width: 290px; }
+  #search { width: 180px; }
+  .stats { display: none; }
+  #detail { padding: 18px 16px 60px; }
+}
+@media (max-width: 640px) {
+  main { flex-direction: column; }
+  #sidebar { width: 100%; max-height: 46vh; border-right: none; border-bottom: 1px solid var(--border); }
+  .brand small { display: none; }
+  #search { width: 130px; }
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="brand">
+    <span class="brand-dot"></span>
+    <span>SellFox API Explorer</span>
+    <small>赛狐开放平台</small>
+  </div>
+  <div class="stats" id="stats"></div>
+  <div class="spacer"></div>
+  <div class="search-wrap">
+    <span class="search-icon">⌕</span>
+    <input id="search" type="search" placeholder="搜索接口名称或路径…" autocomplete="off" spellcheck="false">
+    <span class="search-kbd">/</span>
+  </div>
+  <button class="icon-btn" id="expandAll" title="全部展开">⊞</button>
+  <button class="icon-btn" id="collapseAll" title="全部折叠">⊟</button>
+  <button class="icon-btn" id="themeBtn" title="切换主题">◐</button>
+</header>
+
+<main>
+  <aside id="sidebar">
+    <div class="sidebar-tools">
+      <button class="mini-btn" id="filterAll" aria-pressed="true">全部</button>
+      <button class="mini-btn" id="filterPost">POST</button>
+      <button class="mini-btn" id="filterGet">GET</button>
+    </div>
+    <div id="tree"></div>
+  </aside>
+  <section id="detail"></section>
+</main>
+
+<div id="toast"></div>
+
+<script id="api-tree-data" type="application/json">__API_TREE_DATA__</script>
+<script>
+(function () {
+  "use strict";
+
+  var DATA = JSON.parse(document.getElementById("api-tree-data").textContent);
+  var TREE = DATA.tree || [];
+  var STATS = DATA.stats || {};
+
+  var els = {
+    tree: document.getElementById("tree"),
+    detail: document.getElementById("detail"),
+    search: document.getElementById("search"),
+    stats: document.getElementById("stats"),
+    toast: document.getElementById("toast")
+  };
+
+  var state = {
+    activeId: null,
+    activeNode: null,
+    collapsed: {},
+    query: "",
+    methodFilter: "ALL"
+  };
+
+  /* ---------------- helpers ---------------- */
+
+  function esc(s) {
+    return String(s == null ? "" : s).replace(/[&<>"']/g, function (c) {
+      return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c];
+    });
+  }
+
+  function methodClass(m) {
+    var up = String(m || "").toUpperCase();
+    var known = { POST: 1, GET: 1, PUT: 1, DELETE: 1, PATCH: 1 };
+    return "m-" + (known[up] ? up : "OTHER");
+  }
+
+  function nodeKey(node) {
+    return node.type + ":" + node.id;
+  }
+
+  function walk(nodes, visit, parents) {
+    parents = parents || [];
+    (nodes || []).forEach(function (n) {
+      visit(n, parents);
+      if (n.children && n.children.length) {
+        walk(n.children, visit, parents.concat([n]));
+      }
+    });
+  }
+
+  function countApis(node) {
+    if (!node.children || !node.children.length) return node.type === "apiDetail" ? 1 : 0;
+    return node.children.reduce(function (sum, c) { return sum + countApis(c); }, 0);
+  }
+
+  function allApiIds() {
+    var ids = [];
+    walk(TREE, function (n) { if (n.type === "apiDetail") ids.push(nodeKey(n)); });
+    return ids;
+  }
+
+  function findById(key) {
+    var found = null;
+    walk(TREE, function (n) { if (nodeKey(n) === key) found = n; });
+    return found;
+  }
+
+  function findPath(key) {
+    var out = null;
+    walk(TREE, function (n, parents) {
+      if (nodeKey(n) === key) out = parents.concat([n]);
+    });
+    return out;
+  }
+
+  function toast(msg) {
+    els.toast.textContent = msg;
+    els.toast.classList.add("show");
+    clearTimeout(toast._t);
+    toast._t = setTimeout(function () { els.toast.classList.remove("show"); }, 1900);
+  }
+
+  function matchesQuery(node, q) {
+    if (!q) return true;
+    var hay = (node.name || "") + " " + (node.path || "");
+    return hay.toLowerCase().indexOf(q) !== -1;
+  }
+
+  function matchesMethod(node) {
+    if (state.methodFilter === "ALL") return true;
+    if (node.type !== "apiDetail") return false;
+    return String(node.method || "").toUpperCase() === state.methodFilter;
+  }
+
+  /* Does this subtree contain anything that passes the current filter? */
+  function subtreeVisible(node) {
+    if (node.type === "apiDetail") {
+      return matchesQuery(node, state.query) && matchesMethod(node);
+    }
+    if (!node.children || !node.children.length) return false;
+    return node.children.some(subtreeVisible);
+  }
+
+  /* ---------------- rendering ---------------- */
+
+  function highlight(text) {
+    var raw = String(text == null ? "" : text);
+    if (!state.query) return esc(raw);
+    var idx = raw.toLowerCase().indexOf(state.query);
+    if (idx === -1) return esc(raw);
+    return esc(raw.slice(0, idx)) +
+      "<mark>" + esc(raw.slice(idx, idx + state.query.length)) + "</mark>" +
+      esc(raw.slice(idx + state.query.length));
+  }
+
+  function renderNode(node, depth) {
+    var isLeaf = node.type === "apiDetail" || node.type === "doc";
+    var key = nodeKey(node);
+    var collapsed = state.collapsed[key] === true;
+    var visible = subtreeVisible(node);
+    var rowClass = "row";
+    if (state.activeId === key) rowClass += " active";
+    if (!visible) rowClass += " hidden-by-filter";
+
+    var html = '<div class="node" data-key="' + esc(key) + '">';
+    html += '<div class="' + rowClass + '" data-key="' + esc(key) + '" style="padding-left:' +
+            (8 + depth * 13) + 'px">';
+
+    if (isLeaf) {
+      html += '<span class="caret leaf"></span>';
+    } else {
+      html += '<span class="caret' + (collapsed ? "" : " open") + '">▶</span>';
+    }
+
+    if (node.type === "apiDetail") {
+      var m = String(node.method || "").toUpperCase();
+      html += '<span class="method ' + methodClass(m) + '">' + esc(m || "?") + "</span>";
+    } else if (node.type === "doc") {
+      html += '<span class="method m-OTHER">DOC</span>';
+    }
+
+    var labelClass = isLeaf ? "row-label" : "row-label folder-label";
+    html += '<span class="' + labelClass + '" title="' + esc(node.name) + '">' +
+            highlight(node.name) + "</span>";
+
+    if (!isLeaf) {
+      html += '<span class="count-badge">' + countApis(node) + "</span>";
+    }
+
+    html += "</div>";
+
+    if (!isLeaf && node.children && node.children.length) {
+      html += '<div class="children' + (collapsed ? " collapsed" : "") + '">';
+      node.children.forEach(function (c) { html += renderNode(c, depth + 1); });
+      html += "</div>";
+    }
+
+    html += "</div>";
+    return html;
+  }
+
+  function renderTree() {
+    var html = "";
+    TREE.forEach(function (n) { html += renderNode(n, 0); });
+    els.tree.innerHTML = html;
+    updateFilterHint();
+  }
+
+  function updateFilterHint() {
+    var shown = els.tree.querySelectorAll('.node > .row:not(.hidden-by-filter)');
+    if (state.query && shown.length === 0) {
+      els.tree.innerHTML = '<div style="padding:34px 18px;text-align:center;color:var(--text-faint);font-size:13px;line-height:1.8">' +
+        "没有匹配的接口<br><span style=\"font-size:12px\">试试其它关键词，或清空筛选</span></div>";
+    }
+  }
+
+  function renderStats() {
+    els.stats.innerHTML =
+      "<span><b>" + (STATS.apis || 0) + "</b> 接口</span>" +
+      "<span><b>" + (STATS.modules || TREE.length) + "</b> 模块</span>" +
+      "<span><b>" + (STATS.folders || 0) + "</b> 分组</span>" +
+      "<span><b>" + (STATS.docs || 0) + "</b> 文档</span>";
+  }
+
+  /* ---------------- detail view ---------------- */
+
+  var PARAM_DOC = [
+    { name: "access_token", type: "string", req: true, desc: "卖家授权后获得的访问令牌" },
+    { name: "client_id", type: "string", req: true, desc: "赛狐开放平台分配的应用 ID" },
+    { name: "timestamp", type: "long", req: true, desc: "13 位毫秒时间戳，与服务器相差需在 ±15 分钟内" },
+    { name: "nonce", type: "int", req: true, desc: "随机整数，每次请求唯一，用于防重放" },
+    { name: "sign", type: "string", req: true, desc: "MD5 签名，见下方签名说明" }
+  ];
+
+  function renderDetailPlaceholder() {
+    els.detail.innerHTML =
+      '<div class="empty-state">' +
+        '<div class="big">⌘</div>' +
+        '<h2>从左侧选择一个接口</h2>' +
+        '<p>共 <b style="color:var(--text-dim)">' + (STATS.apis || 0) + '</b> 个接口、' +
+        (STATS.modules || TREE.length) + ' 个业务模块。' +
+        '支持按名称或路径搜索，键盘 <b>↑</b> <b>↓</b> 可快速切换。</p>' +
+        '<div class="kbd-hint"><span>按</span><b style="border:1px solid var(--border);border-radius:4px;padding:1px 5px;font-family:var(--mono);font-size:11px">/</b><span>聚焦搜索</span></div>' +
+      '</div>';
+  }
+
+  function renderDetail(node, chain) {
+    var parts = [];
+
+    var crumbs = (chain || []).slice(0, -1).map(function (p) { return esc(p.name); });
+    if (crumbs.length) {
+      parts.push('<div class="crumbs">' + crumbs.join('<span class="sep">/</span>') + "</div>");
+    }
+
+    parts.push('<div class="title-row"><h1>' + esc(node.name) + "</h1></div>");
+
+    if (node.type === "apiDetail") {
+      var m = String(node.method || "").toUpperCase();
+      parts.push(
+        '<div class="endpoint-bar">' +
+          '<span class="method ' + methodClass(m) + '">' + esc(m) + "</span>" +
+          "<code>" + esc(node.path) + "</code>" +
+          '<button class="copy-btn" data-copy="' + esc(node.path) + '">复制路径</button>' +
+        "</div>"
+      );
+
+      parts.push(
+        '<div class="section"><h3>基本信息</h3><div class="card"><dl class="meta">' +
+          "<dt>请求方法</dt><dd>" + esc(m) + "</dd>" +
+          "<dt>请求路径</dt><dd>" + esc(node.path) + "</dd>" +
+          "<dt>完整地址</dt><dd>https://openapi.sellfox.com" + esc(node.path) + "</dd>" +
+          "<dt>Content-Type</dt><dd>application/json</dd>" +
+          "<dt>接口 ID</dt><dd>" + esc(node.id) + "</dd>" +
+          "<dt>所属模块</dt><dd>" + esc((chain && chain.length > 1) ? chain[0].name : "—") + "</dd>" +
+        "</dl></div></div>"
+      );
+
+      var paramRows = PARAM_DOC.map(function (p) {
+        return "<tr><td><code>" + esc(p.name) + "</code></td><td>" + esc(p.type) +
+          '</td><td class="req">' + (p.req ? "必填" : "可选") + "</td><td>" + esc(p.desc) + "</td></tr>";
+      }).join("");
+
+      parts.push(
+        '<div class="section"><h3>公共请求参数</h3><div class="card">' +
+          '<table class="params"><thead><tr><th>参数</th><th>类型</th><th>必填</th><th>说明</th></tr></thead>' +
+          "<tbody>" + paramRows + "</tbody></table></div></div>"
+      );
+
+      var sample = '{\n  "access_token": "your-access-token",\n  "client_id": "your-client-id",\n' +
+        '  "timestamp": ' + Date.now() + ",\n  \"nonce\": 123456,\n" +
+        '  "sign": "<MD5 签名>"\n}';
+      parts.push(
+        '<div class="section"><h3>请求体示例</h3><pre class="code">' + highlightJson(sample) + "</pre></div>"
+      );
+
+      parts.push(
+        '<div class="section"><h3>签名算法</h3><div class="note">' +
+          "将所有请求参数（含公共参数）按参数名 ASCII 升序拼接为 <code>key=value&amp;key=value</code>，" +
+          "末尾追加 <code>&amp;key=你的AppSecret</code>，对整串做 <b>MD5</b> 得到 32 位小写十六进制 <code>sign</code>。" +
+          "<br>timestamp 与服务器时间相差超过 15 分钟会被拒绝；nonce 需每次唯一。" +
+        "</div></div>"
+      );
+
+      parts.push(
+        '<div class="section"><h3>在线调试</h3>' +
+          '<div class="note" style="border-left-color:var(--accent)">' +
+            "此页面为纯静态文件，出于浏览器同源策略限制，直接打开时无法调用赛狐 API。" +
+            "需要实际发请求时，请运行仓库中的 <code>python3 sellfox_explorer.py</code>，" +
+            "它会启动带本地代理的完整版（自动处理 CORS 与签名）。" +
+          "</div>" +
+        "</div>"
+      );
+    } else if (node.type === "doc") {
+      parts.push(
+        '<div class="section"><h3>文档</h3><div class="card">' +
+          "<dl class=\"meta\"><dt>类型</dt><dd>开发指南 / 说明文档</dd>" +
+          "<dt>文档 ID</dt><dd>" + esc(node.id) + "</dd>" +
+          "<dt>在线地址</dt><dd>https://sellfoxapi.apifox.cn" + esc(node.to || "") + "</dd></dl>" +
+        "</div></div>"
+      );
+    } else {
+      var kids = node.children || [];
+      var apis = countApis(node);
+      parts.push(
+        '<div class="section"><h3>分组信息</h3><div class="card"><dl class="meta">' +
+          "<dt>分组名称</dt><dd>" + esc(node.name) + "</dd>" +
+          "<dt>包含接口</dt><dd>" + apis + " 个</dd>" +
+          "<dt>直接子项</dt><dd>" + kids.length + " 个</dd>" +
+        "</dl></div></div>"
+      );
+      if (kids.length) {
+        parts.push('<div class="section"><h3>子项</h3><div class="card">');
+        kids.forEach(function (c) {
+          var m = String(c.method || "").toUpperCase();
+          parts.push(
+            '<div style="padding:5px 0;border-bottom:1px solid var(--border)">' +
+            (c.type === "apiDetail" ? '<span class="method ' + methodClass(m) + '">' + esc(m) + "</span> " : "") +
+            esc(c.name) + "</div>"
+          );
+        });
+        parts.push("</div></div>");
+      }
+    }
+
+    els.detail.innerHTML = parts.join("");
+    els.detail.scrollTop = 0;
+  }
+
+  function highlightJson(text) {
+    return esc(text)
+      .replace(/(&quot;(?:[^&]|&(?!quot;))*?&quot;)(\s*:)/g, '<span class="k">$1</span>$2')
+      .replace(/:\s*(&quot;(?:[^&]|&(?!quot;))*?&quot;)/g, ': <span class="s">$1</span>')
+      .replace(/:\s*(-?\d+(?:\.\d+)?)/g, ': <span class="n">$1</span>')
+      .replace(/:\s*(true|false|null)/g, ': <span class="b">$1</span>');
+  }
+
+  /* ---------------- selection ---------------- */
+
+  function select(key, opts) {
+    opts = opts || {};
+    var node = findById(key);
+    if (!node) return;
+    var chain = findPath(key) || [node];
+    state.activeId = key;
+    state.activeNode = node;
+
+    els.tree.querySelectorAll(".row.active").forEach(function (r) { r.classList.remove("active"); });
+    var row = els.tree.querySelector('.row[data-key="' + CSS.escape(key) + '"]');
+    if (row) {
+      row.classList.add("active");
+      if (opts.scroll !== false) row.scrollIntoView({ block: "nearest" });
+    }
+
+    renderDetail(node, chain);
+
+    if (opts.expandAncestors !== false && chain.length > 1) {
+      chain.slice(0, -1).forEach(function (p) {
+        var pk = nodeKey(p);
+        if (state.collapsed[pk]) {
+          delete state.collapsed[pk];
+          var caret = els.tree.querySelector('.row[data-key="' + CSS.escape(pk) + '"] .caret');
+          var kids = els.tree.querySelector('.node[data-key="' + CSS.escape(pk) + '"] > .children');
+          if (caret) caret.classList.add("open");
+          if (kids) kids.classList.remove("collapsed");
+        }
+      });
+    }
+  }
+
+  function toggleFolder(key) {
+    var node = findById(key);
+    if (!node || node.type === "apiDetail" || node.type === "doc") return;
+    var collapsed = state.collapsed[key] === true;
+    if (collapsed) delete state.collapsed[key];
+    else state.collapsed[key] = true;
+
+    var nodeEl = els.tree.querySelector('.node[data-key="' + CSS.escape(key) + '"]');
+    if (nodeEl) {
+      var caret = nodeEl.querySelector(":scope > .row .caret");
+      var kids = nodeEl.querySelector(":scope > .children");
+      if (caret) caret.classList.toggle("open", collapsed);
+      if (kids) kids.classList.toggle("collapsed", !collapsed);
+    }
+  }
+
+  /* ---------------- events ---------------- */
+
+  els.tree.addEventListener("click", function (ev) {
+    var row = ev.target.closest(".row");
+    if (!row) return;
+    var key = row.dataset.key;
+    var node = findById(key);
+    if (!node) return;
+
+    if (node.type === "apiDetail" || node.type === "doc") {
+      select(key);
+    } else {
+      toggleFolder(key);
+      if (state.activeId !== key) select(key, { expandAncestors: false });
+    }
+  });
+
+  els.search.addEventListener("input", function () {
+    state.query = els.search.value.trim().toLowerCase();
+    renderTree();
+    if (state.query) {
+      // auto-expand matches so they are actually visible
+      walk(TREE, function (n) {
+        if (n.children && n.children.some(subtreeVisible)) delete state.collapsed[nodeKey(n)];
+      });
+      renderTree();
+    }
+  });
+
+  els.search.addEventListener("keydown", function (ev) {
+    if (ev.key === "Escape") {
+      els.search.value = "";
+      state.query = "";
+      renderTree();
+      els.search.blur();
+    }
+  });
+
+  document.getElementById("filterAll").addEventListener("click", function () { setMethod("ALL"); });
+  document.getElementById("filterPost").addEventListener("click", function () { setMethod("POST"); });
+  document.getElementById("filterGet").addEventListener("click", function () { setMethod("GET"); });
+
+  function setMethod(m) {
+    state.methodFilter = m;
+    ["filterAll", "filterPost", "filterGet"].forEach(function (id) {
+      var el = document.getElementById(id);
+      el.setAttribute("aria-pressed", String(id === "filter" + (m === "ALL" ? "All" : m.charAt(0) + m.slice(1).toLowerCase())));
+    });
+    renderTree();
+  }
+
+  document.getElementById("expandAll").addEventListener("click", function () {
+    state.collapsed = {};
+    renderTree();
+  });
+
+  document.getElementById("collapseAll").addEventListener("click", function () {
+    walk(TREE, function (n) {
+      if (n.children && n.children.length) state.collapsed[nodeKey(n)] = true;
+    });
+    renderTree();
+  });
+
+  var themeBtn = document.getElementById("themeBtn");
+  themeBtn.addEventListener("click", function () {
+    var next = document.documentElement.getAttribute("data-theme") === "dark" ? "light" : "dark";
+    document.documentElement.setAttribute("data-theme", next);
+    try { localStorage.setItem("sellfox_theme", next); } catch (e) {}
+    toast(next === "dark" ? "深色主题" : "浅色主题");
+  });
+  try {
+    var saved = localStorage.getItem("sellfox_theme");
+    if (saved) document.documentElement.setAttribute("data-theme", saved);
+  } catch (e) {}
+
+  els.detail.addEventListener("click", function (ev) {
+    var btn = ev.target.closest("[data-copy]");
+    if (!btn) return;
+    var text = btn.dataset.copy;
+    var done = function () { toast("已复制 " + text); };
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).then(done).catch(function () { toast("复制失败"); });
+    } else {
+      var ta = document.createElement("textarea");
+      ta.value = text;
+      document.body.appendChild(ta);
+      ta.select();
+      try { document.execCommand("copy"); done(); } catch (e) { toast("复制失败"); }
+      document.body.removeChild(ta);
+    }
+  });
+
+  document.addEventListener("keydown", function (ev) {
+    var tag = (ev.target.tagName || "").toLowerCase();
+    var typing = tag === "input" || tag === "textarea";
+
+    if (ev.key === "/" && !typing) {
+      ev.preventDefault();
+      els.search.focus();
+      els.search.select();
+      return;
+    }
+    if (typing) return;
+
+    if (ev.key === "ArrowDown" || ev.key === "ArrowUp") {
+      ev.preventDefault();
+      var ids = allApiIds();
+      if (!ids.length) return;
+      var idx = ids.indexOf(state.activeId);
+      var next = ev.key === "ArrowDown"
+        ? (idx === -1 ? 0 : Math.min(idx + 1, ids.length - 1))
+        : (idx === -1 ? ids.length - 1 : Math.max(idx - 1, 0));
+      select(ids[next]);
+    }
+  });
+
+  /* ---------------- boot ---------------- */
+
+  renderStats();
+  renderTree();
+  renderDetailPlaceholder();
+
+  // Restore the last selection if it still exists in the current tree.
+  var restored = null;
+  try { restored = localStorage.getItem("sellfox_last_api"); } catch (e) {}
+  if (restored && findById(restored)) {
+    select(restored);
+  }
+
+  els.tree.addEventListener("click", function (ev) {
+    var row = ev.target.closest(".row");
+    if (!row) return;
+    if (findById(row.dataset.key) && row.dataset.key.indexOf("apiDetail:") === 0) {
+      try { localStorage.setItem("sellfox_last_api", row.dataset.key); } catch (e) {}
+    }
+  }, true);
+
+  // Expose a tiny API for automated verification.
+  window.__EXPLORER__ = {
+    stats: STATS,
+    count: function () { return allApiIds().length; },
+    select: select,
+    toggle: toggleFolder,
+    search: function (q) { els.search.value = q; els.search.dispatchEvent(new Event("input")); },
+    nodes: function () { return els.tree.querySelectorAll(".node").length; },
+    visibleApis: function () {
+      return els.tree.querySelectorAll(".row:not(.hidden-by-filter)").length;
+    }
+  };
+})();
+</script>
+</body>
+</html>
